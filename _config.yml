@@ -6,16 +6,16 @@ collections:
     output: true
 
 social:
-  name: Project Name
+  name: Архитектурное бюро А510
   links:
-    - https://www.facebook.com/*link*
-    - http://instagram.com/*link*
+    - https://www.facebook.com/a510ru
+    - http://instagram.com/a510ru
 
 logo: /icon-512.png
-url: https://URL.HERE
+url: https://a510.ru
 
-title: "*TITLE*"
-lang: "en_US"
+title: "Архитектурное бюро А510"
+lang: "ru_RU"
 
 defaults:
   -

@@ -6,15 +6,15 @@ html {
 
 /* Light */
 :root {
-    --text-color: #000;
-    --back-color: #fff;
+    --text-color: #100e11;
+    --back-color: #fcfbf9;
 }
 
 /* Dark */
 @media(prefers-color-scheme: dark) {
     :root {
-        --text-color: #fff;
-        --back-color: #000;
+        --text-color: #fcfbf9;
+        --back-color: #100e11;
     }
 
     img.plan {

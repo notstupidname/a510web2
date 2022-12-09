@@ -397,6 +397,12 @@ ul.menu>li>ul>li {
 ul.menu a {
     display: block;
     padding: 0.25em 0;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0.3em;
+}
+
+ul.menu a:hover {
+    text-decoration: underline;
 }
 
 ul>li>ul {
@@ -411,6 +417,12 @@ main {
 
 #footer {
     grid-column: 3/4;
+    text-align: right;
+    margin-block: var(--gap);
+}
+
+#footer *+* {
+    margin-block: 0.25em;
 }
 
 main>*+* {

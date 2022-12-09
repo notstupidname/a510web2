@@ -8,6 +8,7 @@ html {
 :root {
     --text-color: #100e11;
     --back-color: #fcfbf9;
+    --mid-color: #666;
 }
 
 /* Dark */
@@ -395,14 +396,21 @@ ul.menu>li>ul>li {
 }
 
 ul.menu a {
-    display: block;
+    display: inline-block;
     padding: 0.25em 0;
-    text-decoration-thickness: 3px;
     text-underline-offset: 0.3em;
+    text-decoration: underline 3px;
+    text-decoration-color: var(--back-color);
+    transition: text-decoration-color .3s ease-in;
 }
 
 ul.menu a:hover {
-    text-decoration: underline;
+    text-decoration-color: var(--text-color);
+    opacity: 1;
+}
+
+ul.menu li.current>a {
+    text-decoration-color: var(--mid-color);
 }
 
 ul>li>ul {

@@ -340,11 +340,12 @@ body.transition:after {
 /* Layout */
 body {
     display: grid;
-    grid-template-columns: var(--gap) max-content 1fr var(--gap);
+    grid-template-columns: var(--gap) minmax(max-content, 1fr) 4fr var(--gap);
 }
 
 #nav {
     height: 100vh;
+    height: 100dvh;
     position: sticky;
     top: 0;
     padding: var(--gap);

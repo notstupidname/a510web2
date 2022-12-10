@@ -458,11 +458,13 @@ img.hero {
         align-items: center;
         gap: 0.25rem;
         font-weight: bold;
+        letter-spacing: -0.05ch;
     }
 
     #navbar a>span {
         font-weight: normal;
         font-size: 0.75rem;
+        letter-spacing: normal;
     }
 
     #nav {

@@ -28,17 +28,7 @@ html {
     fill: var(--text-color);
     stroke: var(--text-color);
     /* Type Scale */
-    --step-0: clamp(1.00rem, calc(0.89rem + 0.36vw), 1.25rem);
-    --step-1: clamp(1.13rem, calc(0.96rem + 0.54vw), 1.50rem);
-    --step-2: clamp(1.27rem, calc(1.04rem + 0.76vw), 1.80rem);
-    --step-3: clamp(1.42rem, calc(1.11rem + 1.05vw), 2.16rem);
-    --step-4: clamp(1.60rem, calc(1.18rem + 1.41vw), 2.59rem);
-    --gap: clamp(0.5rem, 2vw, 2rem);
-    --step-0: clamp(1.00rem, calc(0.92rem + 0.28vw), 1.25rem);
-    --step-1: clamp(1.07rem, calc(0.95rem + 0.38vw), 1.41rem);
-    --step-2: clamp(1.14rem, calc(0.99rem + 0.49vw), 1.58rem);
-    --step-3: clamp(1.22rem, calc(1.03rem + 0.63vw), 1.78rem);
-    --step-4: clamp(1.30rem, calc(1.06rem + 0.78vw), 2.00rem);
+    --gap: clamp(0.75rem, 2vw, 2rem);
     --step--1: clamp(0.89rem, calc(0.58rem + 0.38vw), 1.04rem);
     --step-0: clamp(1.00rem, calc(0.50rem + 0.63vw), 1.25rem);
     --step-1: clamp(1.13rem, calc(0.38rem + 0.94vw), 1.50rem);
@@ -370,7 +360,17 @@ body {
     letter-spacing: -0.05ch;
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 750px) {
+    #nav a.logo>span.big {
+        display: none;
+    }
+
+    #nav ul.menu {
+        font-size: var(--step-1);
+    }
+}
+
+@media screen and (max-height: 650px) {
     #nav a.logo>span {
         display: none;
     }
@@ -402,6 +402,10 @@ ul.menu a:hover {
 
 ul.menu li.current>a {
     text-decoration-color: var(--mid-color);
+}
+
+ul.icons>li>a {
+    display: flex;
 }
 
 ul>li>ul {

@@ -167,12 +167,12 @@ body {
     overflow-x: hidden;
 }
 
-body.is-loading *,
+/* body.is-loading *,
 body.is-loading *:before,
 body.is-loading *:after {
     animation: none !important;
     transition: none !important;
-}
+} */
 
 /* Type */
 
@@ -246,52 +246,7 @@ a:active {
 
 /* Loader */
 
-@keyframes overlay-hide {
-    0% {
-        opacity: 1;
-        z-index: 100002;
-    }
-
-    15% {
-        opacity: 1;
-        z-index: 100002;
-    }
-
-    99% {
-        opacity: 0;
-        z-index: 100002;
-    }
-
-    100% {
-        opacity: 0;
-        z-index: -1;
-    }
-}
-
-@keyframes overlay-show {
-    0% {
-        opacity: 0;
-        z-index: -1;
-    }
-
-    15% {
-        opacity: 1;
-        z-index: 100002;
-    }
-
-    99% {
-        opacity: 1;
-        z-index: 100002;
-    }
-
-    100% {
-        opacity: 1;
-        z-index: 100002;
-    }
-}
-
 body:after {
-    animation: overlay-hide 0.5s ease-in forwards !important;
     background-color: var(--back-color);
     content: '';
     display: block;
@@ -301,20 +256,25 @@ body:after {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: -1;
+    z-index: 10;
+    pointer-events: none;
+    transition: opacity .3s ease-in-out;
 }
 
+body.menu-visible {
+    overflow: hidden;
+}
+
+body.menu-visible:after {
+    opacity: 0.5;
+}
 
 body.is-loading:after {
-    animation: none !important;
     opacity: 1;
-    z-index: 100000;
 }
 
 body.transition:after {
-    animation: overlay-show 1.25s ease-in forwards !important;
     opacity: 1;
-    z-index: 1000000;
 }
 
 .hide {
@@ -522,6 +482,7 @@ img.hero {
 
     #nav.visible {
         transform: translateX(0);
+        box-shadow: 0 0 10px rgb(0 0 0 / 50%)
     }
 
     main {

@@ -1,3 +1,4 @@
+(function() {
 "use strict"
 
 const body = document.querySelector('body');
@@ -48,13 +49,24 @@ let transition = function(e) {
         return;
     e.preventDefault();
     e.stopPropagation();
+    hideNav();
     body.classList.add('transition');
+    console.log('click2');
     window.setTimeout(function() {
         window.location.href = href;
-    }, 50);
+    }, 250);
 }
 
 body.addEventListener('click', function(e) {
+    for (let target = e.target; target && target != this; target = target.parentNode) {
+        if (target.matches('a')) {
+            transition.call(target, e);
+            break;
+        }
+    }
+}, false);
+
+nav.addEventListener('click', function(e) {
     for (let target = e.target; target && target != this; target = target.parentNode) {
         if (target.matches('a')) {
             transition.call(target, e);
@@ -75,3 +87,4 @@ window.addEventListener('load', function() {
     body.classList.remove('is-loading');
     body.classList.remove('transition');
 });
+})();

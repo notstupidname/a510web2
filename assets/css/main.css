@@ -349,6 +349,13 @@ body {
     grid-template-columns: var(--gap) minmax(max-content, 1fr) 4fr var(--gap);
 }
 
+/* Navbar */
+
+#navbar {
+    display: none;
+}
+
+
 #nav {
     height: 100vh;
     height: 100dvh;
@@ -441,4 +448,34 @@ img.hero {
     width: 100%;
     max-height: 80vh;
     object-fit: cover;
+}
+
+@media screen and (max-width: 1270px) {
+
+    #navbar {
+        grid-column: 1/5;
+        position: sticky;
+        top: 0;
+        padding: var(--gap);
+        display: flex;
+        justify-content: space-between;
+        background: var(--back-color);
+    }
+
+    #nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateX(-100vw);
+    }
+
+    body {
+        grid-template-columns: var(--gap) 1fr var(--gap);
+    }
+
+    main,
+    #footer {
+        grid-column: 2/3;
+        margin-top: 0;
+    }
 }

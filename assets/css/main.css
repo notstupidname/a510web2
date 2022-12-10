@@ -357,7 +357,7 @@ body.transition:after {
 /* Layout */
 body {
     display: grid;
-    grid-template-columns: var(--gap) minmax(max-content, 1fr) 4fr var(--gap);
+    grid-template-columns: var(--gap) max-content 1fr var(--gap);
 }
 
 /* Navbar */
@@ -379,6 +379,13 @@ body {
     align-items: center;
     justify-content: space-between;
     grid-column: 2/3;
+    width: clamp(33ch, 20vw, 85vw);
+}
+
+#nav .close {
+    display: none;
+    position: absolute;
+    left: var(--gap);
 }
 
 #nav a.logo {
@@ -503,24 +510,18 @@ img.hero {
         top: 0;
         left: 0;
         transform: translateX(-100vw);
-        width: clamp(30ch, 40%, 85%);
         padding: var(--gap);
         background: var(--back-color);
         z-index: 20;
         transition: transform .3s ease-in;
     }
 
+    #nav .close {
+        display: block;
+    }
+
     #nav.visible {
         transform: translateX(0);
-    }
-
-    body {
-        grid-template-columns: var(--gap) 1fr var(--gap);
-    }
-
-    main,
-    #footer {
-        grid-column: 2/3;
     }
 
     main {

@@ -509,7 +509,7 @@ img.hero {
         position: fixed;
         top: 0;
         left: 0;
-        transform: translateX(-100vw);
+        transform: translateX(calc(clamp(33ch, 20vw, 85vw)*-1));
         padding: var(--gap);
         background: var(--back-color);
         z-index: 20;

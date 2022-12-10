@@ -1,6 +1,44 @@
 "use strict"
 
 const body = document.querySelector('body');
+const nav = document.querySelector('#nav');
+const navToggle = document.querySelector('a[href="#nav"]');
+const navClose = document.querySelector('#nav .close');
+const backToTop = document.querySelector('#backtotop');
+
+let hideNav = function() {
+    nav.classList.remove('visible');
+    body.classList.remove('menu-visible');
+}
+
+let toggleNav = function() {
+    nav.classList.toggle('visible');
+    body.classList.toggle('menu-visible');
+}
+
+//Hide nav and cart on body click
+body.addEventListener('click', function(e){
+    if (body.classList.contains('menu-visible')) {
+        e.preventDefault();
+        e.stopPropagation();
+        hideNav();
+    }
+}, false);
+
+nav.addEventListener('click', function(e){
+    e.stopPropagation();
+}, false);
+
+navToggle.addEventListener('click', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    toggleNav();
+}, false);
+navClose.addEventListener('click', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    hideNav();
+}, false);
 
 // Transition effect
 let transition = function(e) {

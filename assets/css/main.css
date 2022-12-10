@@ -39,6 +39,12 @@ html {
     --step-2: clamp(1.14rem, calc(0.99rem + 0.49vw), 1.58rem);
     --step-3: clamp(1.22rem, calc(1.03rem + 0.63vw), 1.78rem);
     --step-4: clamp(1.30rem, calc(1.06rem + 0.78vw), 2.00rem);
+    --step--1: clamp(0.89rem, calc(0.58rem + 0.38vw), 1.04rem);
+    --step-0: clamp(1.00rem, calc(0.50rem + 0.63vw), 1.25rem);
+    --step-1: clamp(1.13rem, calc(0.38rem + 0.94vw), 1.50rem);
+    --step-2: clamp(1.27rem, calc(0.20rem + 1.34vw), 1.80rem);
+    --step-3: clamp(1.42rem, calc(-0.05rem + 1.84vw), 2.16rem);
+    --step-4: clamp(1.60rem, calc(-0.38rem + 2.48vw), 2.59rem);
 }
 
 ::selection {
@@ -445,6 +451,8 @@ main {
     grid-column: 3/4;
     text-align: right;
     margin-block: var(--gap);
+    opacity: 0.85;
+    font-size: var(--step--1);
 }
 
 #footer *+* {
@@ -495,6 +503,15 @@ img.hero {
         top: 0;
         left: 0;
         transform: translateX(-100vw);
+        width: clamp(30ch, 40%, 85%);
+        padding: var(--gap);
+        background: var(--back-color);
+        z-index: 20;
+        transition: transform .3s ease-in;
+    }
+
+    #nav.visible {
+        transform: translateX(0);
     }
 
     body {
@@ -504,6 +521,9 @@ img.hero {
     main,
     #footer {
         grid-column: 2/3;
+    }
+
+    main {
         margin-top: 0;
     }
 }

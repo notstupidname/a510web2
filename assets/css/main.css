@@ -9,6 +9,7 @@ html {
     --text-color: #100e11;
     --back-color: #fcfbf9;
     --mid-color: #666;
+    --font-weight: 375;
 }
 
 /* Dark */
@@ -16,6 +17,7 @@ html {
     :root {
         --text-color: #fcfbf9;
         --back-color: #100e11;
+        --font-weight: 300;
     }
 
     img.plan {
@@ -43,6 +45,7 @@ html {
 }
 
 html {
+    font-weight: var(--font-weight);
     scroll-behavior: smooth;
     scrollbar-width: thin;
     scrollbar-gutter: stable;
@@ -180,7 +183,8 @@ h4,
 h5,
 h6 {
     line-height: 1.2em;
-    font-weight: normal;
+    font-weight: 425;
+    letter-spacing: -0.025ch;
     text-transform: uppercase;
 }
 
@@ -356,8 +360,8 @@ body {
 
 #nav a.logo>span.big {
     font-size: calc(var(--step-4)*1.5);
-    font-weight: bold;
-    letter-spacing: -0.05ch;
+    font-weight: 450;
+    letter-spacing: -0.1ch;
 }
 
 @media screen and (max-height: 750px) {
@@ -461,8 +465,8 @@ img.hero {
         flex-direction: column;
         align-items: center;
         gap: 0.25rem;
-        font-weight: bold;
-        letter-spacing: -0.05ch;
+        font-weight: 450;
+        letter-spacing: -0.1ch;
     }
 
     #navbar a>span {

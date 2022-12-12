@@ -31,6 +31,7 @@ html {
     stroke: var(--text-color);
     /* Type Scale */
     --gap: clamp(0.75rem, 2vw, 2rem);
+    --column-width: 75ch;
     --step--1: clamp(0.89rem, calc(0.58rem + 0.38vw), 1.04rem);
     --step-0: clamp(1.00rem, calc(0.50rem + 0.63vw), 1.25rem);
     --step-1: clamp(1.13rem, calc(0.38rem + 0.94vw), 1.50rem);
@@ -205,8 +206,7 @@ h4 {
 }
 
 p {
-    margin-bottom: 1em;
-    max-width: 75ch;
+    max-width: var(--column-width);
 }
 
 sup {
@@ -217,7 +217,7 @@ sup {
 
 hr {
     border: 0;
-    margin: 2rem 0;
+    margin: var(--gap) 0;
 }
 
 a {
@@ -420,6 +420,16 @@ ul>li>ul {
 main {
     grid-column: 3/4;
     margin-top: var(--gap);
+    display: flex;
+    flex-direction: column;
+}
+
+main>*+* {
+    margin-top: 1em;
+}
+
+main h1:first-of-type {
+    margin-top: 0;
 }
 
 #footer {
@@ -434,14 +444,79 @@ main {
     margin-block: 0.25em;
 }
 
-main>*+* {
-    margin-top: 1em;
-}
 
 img.hero {
     width: 100%;
     max-height: 80vh;
     object-fit: cover;
+}
+
+img.plan {
+    width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    font-size: var(--step-4);
+}
+
+/* Table */
+
+table {
+    width: clamp(320px, 100%, 50ch);
+}
+
+table tbody tr {
+    border-bottom: solid 1px rgba(128, 128, 128, 0.1);
+    border-left: 0;
+    border-right: 0;
+}
+
+table tbody tr:last-child {
+    border: 0;
+}
+
+table td {
+    line-height: 2em;
+    padding-top: 0.5em;
+    text-align: center;
+}
+
+table td:first-child {
+    text-align: left;
+}
+
+table td:last-child {
+    text-align: right;
+}
+
+/* Breadcrumbs */
+
+ul.breadcrumbs {
+    line-height: 2em;
+    font-size: var(--step--1);
+    max-width: none;
+    color: var(--mid-color);
+    letter-spacing: -0.05ch;
+    opacity: .95;
+    margin-top: var(--step-4);
+}
+
+ul.breadcrumbs:first-child {
+    margin-top: 0;
+}
+
+ul.breadcrumbs li {
+    display: inline-block;
+    padding: 0;
+    white-space: nowrap;
+}
+
+ul.breadcrumbs li::after {
+    content: ">";
+    padding-left: 1ch;
+}
+
+ul.breadcrumbs li:last-child::after {
+    content: "";
 }
 
 @media screen and (max-width: 1270px) {

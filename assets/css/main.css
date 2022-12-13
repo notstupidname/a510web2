@@ -560,7 +560,7 @@ button.alt,
 .project-wrapper {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 5vh;
+    margin-block: 5vh;
     gap: calc(var(--gap)*3);
 }
 

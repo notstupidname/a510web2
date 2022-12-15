@@ -715,11 +715,11 @@ textarea {
 }
 
 .project-top>div:first-child {
-    flex: 1 50ch;
+    flex: 3 50ch;
 }
 
 .project-top>div:last-child {
-    flex: 1;
+    flex: 1 30ch;
     justify-content: flex-start;
     gap: var(--space-m);
     align-items: center;

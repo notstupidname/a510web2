@@ -29,15 +29,42 @@ html {
     color: var(--text-color);
     fill: var(--text-color);
     stroke: var(--text-color);
-    /* Type Scale */
-    --gap: clamp(0.75rem, 2vw, 2rem);
     --column-width: 75ch;
+    --gap: clamp(0.75rem, 2vw, 2rem);
+
+    /* Type Scale */
     --step--1: clamp(0.89rem, calc(0.58rem + 0.38vw), 1.04rem);
     --step-0: clamp(1.00rem, calc(0.50rem + 0.63vw), 1.25rem);
     --step-1: clamp(1.13rem, calc(0.38rem + 0.94vw), 1.50rem);
     --step-2: clamp(1.27rem, calc(0.20rem + 1.34vw), 1.80rem);
     --step-3: clamp(1.42rem, calc(-0.05rem + 1.84vw), 2.16rem);
     --step-4: clamp(1.60rem, calc(-0.38rem + 2.48vw), 2.59rem);
+
+    /* Spaces */
+    --space-3xs: clamp(0.25rem, calc(0.13rem + 0.16vw), 0.31rem);
+    --space-2xs: clamp(0.50rem, calc(0.25rem + 0.31vw), 0.63rem);
+    --space-xs: clamp(0.75rem, calc(0.38rem + 0.47vw), 0.94rem);
+    --space-s: clamp(1.00rem, calc(0.50rem + 0.63vw), 1.25rem);
+    --space-m: clamp(1.50rem, calc(0.75rem + 0.94vw), 1.88rem);
+    --space-l: clamp(2.00rem, calc(1.00rem + 1.25vw), 2.50rem);
+    --space-xl: clamp(3.00rem, calc(1.50rem + 1.88vw), 3.75rem);
+    --space-2xl: clamp(4.00rem, calc(2.00rem + 2.50vw), 5.00rem);
+    --space-3xl: clamp(6.00rem, calc(3.00rem + 3.75vw), 7.50rem);
+
+    /* One-up pairs */
+    --space-3xs-2xs: clamp(0.25rem, calc(-0.50rem + 0.94vw), 0.63rem);
+    --space-2xs-xs: clamp(0.50rem, calc(-0.37rem + 1.09vw), 0.94rem);
+    --space-xs-s: clamp(0.75rem, calc(-0.25rem + 1.25vw), 1.25rem);
+    --space-s-m: clamp(1.00rem, calc(-0.75rem + 2.19vw), 1.88rem);
+    --space-m-l: clamp(1.50rem, calc(-0.50rem + 2.50vw), 2.50rem);
+    --space-l-xl: clamp(2.00rem, calc(-1.50rem + 4.38vw), 3.75rem);
+    --space-xl-2xl: clamp(3.00rem, calc(-1.00rem + 5.00vw), 5.00rem);
+    --space-2xl-3xl: clamp(4.00rem, calc(-3.00rem + 8.75vw), 7.50rem);
+
+    /* Custom pairs */
+    --space-s-l: clamp(1.00rem, calc(-2.00rem + 3.75vw), 2.50rem);
+    --space-m-xl: clamp(1.50rem, calc(-3.00rem + 5.63vw), 3.75rem);
+
 }
 
 ::selection {
@@ -259,6 +286,7 @@ body.menu-visible {
 
 body.menu-visible:after {
     opacity: 0.5;
+    pointer-events: auto;
 }
 
 body.is-loading:after {
@@ -431,7 +459,7 @@ main>section:first-of-type {
 }
 
 main>section+section {
-    margin-top: calc(var(--gap)*3);
+    margin-top: var(--space-xl-2xl);
 }
 
 main h1:first-of-type {
@@ -450,7 +478,8 @@ main>header:first-child {
 #footer {
     grid-column: 3/4;
     text-align: right;
-    margin-block: var(--gap);
+    margin-bottom: var(--gap);
+    margin-top: var(--space-xl-2xl);
     opacity: 0.85;
     font-size: var(--step--1);
 }
@@ -459,6 +488,13 @@ main>header:first-child {
     margin-block: 0.25em;
 }
 
+#cta {
+    grid-column: 3/4;
+    margin-top: var(--space-2xl-3xl);
+    width: clamp(300px, 100%, 50ch);
+    margin-inline: auto;
+    text-align: center;
+}
 
 img.hero {
     width: 100%;
@@ -476,7 +512,7 @@ img.plan {
 /* Table */
 
 table {
-    width: clamp(320px, 100%, 80ch);
+    width: clamp(300px, 100%, 80ch);
 }
 
 table tbody tr {
@@ -501,6 +537,7 @@ table td:first-child {
 
 table td:last-child {
     text-align: right;
+    white-space: nowrap;
 }
 
 /* Buttons */
@@ -524,7 +561,8 @@ button,
     font-size: var(--step-1);
     background-color: var(--text-color);
     color: var(--back-color);
-    width: min(25ch, 100%);
+    min-width: 28ch;
+    width: min(28ch, 100%);
 }
 
 input[type="submit"].alt,
@@ -537,11 +575,143 @@ button.alt,
     box-shadow: inset 0 0 0 1px;
 }
 
+/* Forms */
+
+.form-wrapper {
+    min-width: clamp(300px, 100%, 50ch);
+}
+
+.form-wrapper form {
+    margin-top: var(--space-l-xl);
+}
+
+form button {
+    align-self: center;
+    margin-top: var(--space-s);
+}
+
+input[type=email],
+input[type=password],
+input[type=tel],
+input[type=text],
+select,
+textarea {
+    appearance: none;
+    border-radius: 0;
+    background: var(--back-color);
+    border: solid 1px var(--mid-color);
+    display: block;
+    outline: 0;
+    padding: 0 1em;
+    text-decoration: none;
+    font-size: var(--step-0);
+}
+
+form.alt input {
+    border: 0;
+    border-bottom: solid 1px var(--mid-color);
+}
+
+input[type=email],
+input[type=password],
+input[type=tel],
+input[type=text],
+select {
+    height: 2.75em;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--text-color);
+}
+
+::-webkit-input-placeholder {
+    color: var(--mid-color);
+    font-size: var(--step-0);
+
+}
+
+:-moz-placeholder {
+    color: var(--mid-color);
+}
+
+::-moz-placeholder {
+    color: var(--mid-color);
+}
+
+:-ms-input-placeholder {
+    color: var(--mid-color);
+}
+
+textarea {
+    padding: 0.75em 1em;
+}
+
+/* Items */
+
+.items {
+    --grid-gap: var(--space-m);
+    --grid-max-columns: 3;
+    --grid-item-min-width: min(45ch, 100%);
+
+    --gap-count: calc(var(--grid-max-columns) - 1);
+    --total-gap-width: calc(var(--gap-count) * var(--grid-gap));
+    --grid-item-max-width: calc((100% - var(--total-gap-width)) / var(--grid-max-columns));
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(max(var(--grid-item-min-width), var(--grid-item-max-width)), 1fr));
+    gap: calc(var(--grid-gap)*2) var(--grid-gap);
+
+    width: 100%;
+    margin-top: var(--space-l-xl);
+}
+
+
+
+.item {
+    display: flex;
+    flex-direction: column;
+}
+
+.item .caption {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.item h2 {
+    font-size: var(--step-1);
+    margin: 1.1em 0 0.25em;
+}
+
+.item .caption h4 {
+    line-height: 1;
+    font-weight: 300;
+    text-transform: none;
+    white-space: nowrap;
+}
+
+.item .caption p {
+    font-size: var(--step--1);
+    margin-bottom: 0;
+    line-height: 1em;
+}
+
 /* Project */
+.flex-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+}
+
 .project-top {
     display: flex;
     flex-wrap: wrap;
-    gap: calc(var(--gap)*2);
+    gap: var(--space-l);
 }
 
 .project-top>div:first-child {
@@ -551,27 +721,26 @@ button.alt,
 .project-top>div:last-child {
     flex: 1;
     justify-content: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap);
+    gap: var(--space-m);
     align-items: center;
 }
 
 .project-wrapper {
     display: flex;
     flex-wrap: wrap;
-    margin-block: 5vh;
-    gap: calc(var(--gap)*3);
+    margin-block: var(--space-xl-2xl);
+    gap: var(--space-xl-2xl) var(--space-l);
 }
 
 .project-plans {
     flex: 1 60%;
+    gap: var(--space-l-xl);
 }
 
 .project-tables {
     flex: 1 37ch;
     display: flex;
-    gap: calc(var(--step-4)*2);
+    gap: var(--space-l);
     flex-wrap: wrap;
     align-content: flex-start;
 }
@@ -580,9 +749,27 @@ button.alt,
     flex: 1 37ch;
 }
 
+.project-tables button {
+    align-self: center;
+    margin-top: var(--space-m);
+}
+
 .asterisk {
     font-size: var(--step--1);
     opacity: 0.85;
+}
+
+.project-gallery {
+    gap: var(--space-s-m);
+}
+
+.project-gallery img {
+    width: 100%;
+}
+
+.project-related>div:last-child {
+    align-items: center;
+    margin-top: var(--space-2xl);
 }
 
 /* Breadcrumbs */

@@ -439,7 +439,7 @@ ul.menu a:hover {
 }
 
 ul.menu li.current>a {
-    text-decoration-color: var(--mid-color);
+    text-decoration-color: rgba(140, 140, 140, 0.2);
 }
 
 ul.icons>li>a {
@@ -732,13 +732,14 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-l);
+    margin-top: 1em;
 }
 
-.project-top>div:first-child {
+.project-top>*:first-child {
     flex: 3 50ch;
 }
 
-.project-top>div:last-child {
+.project-top>*:last-child {
     flex: 1 30ch;
     justify-content: flex-start;
     gap: var(--space-m);
@@ -760,7 +761,7 @@ textarea {
 .project-tables {
     flex: 1 37ch;
     display: flex;
-    gap: var(--space-l);
+    gap: var(--space-xl-2xl) var(--space-l);
     flex-wrap: wrap;
     align-content: flex-start;
 }
@@ -829,7 +830,6 @@ ul.breadcrumbs {
     line-height: 2em;
     font-size: var(--step--1);
     max-width: none;
-    color: var(--mid-color);
     letter-spacing: -0.05ch;
     opacity: .95;
 }
@@ -843,10 +843,26 @@ ul.breadcrumbs li {
 ul.breadcrumbs li::after {
     content: ">";
     padding-left: 1ch;
+    color: var(--mid-color);
 }
 
 ul.breadcrumbs li:last-child::after {
     content: "";
+}
+
+ul.breadcrumbs li:last-child {
+    opacity: 0.75;
+}
+
+ul.breadcrumbs a {
+    text-decoration: underline var(--back-color);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.3em;
+    transition: .3s ease-in-out;
+}
+
+ul.breadcrumbs a:hover {
+    text-decoration-color: var(--text-color);
 }
 
 @media screen and (max-width: 1270px) {

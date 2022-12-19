@@ -284,6 +284,10 @@ body:after {
     transition: opacity .3s ease-in-out;
 }
 
+/* html.menu-visible {
+    overflow: hidden;
+} */
+
 body.menu-visible {
     overflow: hidden;
 }
@@ -592,12 +596,30 @@ button.alt:hover,
     background: rgba(128, 128, 128, 0.1);
 }
 
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+button:hover,
+.button:hover {
+    opacity: 0.85;
+}
+
 input[type="submit"]:active,
 input[type="reset"]:active,
 input[type="button"]:active,
 button:active,
 .button:active {
-    transform: scale(0.95);
+    transform: scale(0.97);
+}
+
+a:focus-visible,
+input[type="submit"]:focus-visible,
+input[type="reset"]:focus-visible,
+input[type="button"]:focus-visible,
+button:focus-visible,
+.button:focus-visible {
+    outline: dashed 2px var(--mid-color);
+    outline-offset: 4px;
 }
 
 /* Forms */

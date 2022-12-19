@@ -2,6 +2,7 @@
 "use strict"
 
 const body = document.querySelector('body');
+const html = document.querySelector('html');
 const nav = document.querySelector('#nav');
 const navToggle = document.querySelector('a[href="#nav"]');
 const navClose = document.querySelector('#nav .close');
@@ -10,14 +11,16 @@ const backToTop = document.querySelector('#backtotop');
 let hideNav = function() {
     nav.classList.remove('visible');
     body.classList.remove('menu-visible');
+    // html.classList.remove('menu-visible');
 }
 
 let toggleNav = function() {
     nav.classList.toggle('visible');
     body.classList.toggle('menu-visible');
+    // html.classList.toggle('menu-visible');
 }
 
-//Hide nav and cart on body click
+//Hide nav on body click
 body.addEventListener('click', function(e){
     if (body.classList.contains('menu-visible')) {
         e.preventDefault();

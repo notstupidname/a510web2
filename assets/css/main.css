@@ -1,5 +1,19 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('/assets/fonts/roboto-mono-variable.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 100 700;
+}
+
+html {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+}
+
 html {
     color-scheme: light dark;
 }
@@ -39,6 +53,7 @@ html {
     --step-2: clamp(1.27rem, calc(0.20rem + 1.34vw), 1.80rem);
     --step-3: clamp(1.42rem, calc(-0.05rem + 1.84vw), 2.16rem);
     --step-4: clamp(1.60rem, calc(-0.38rem + 2.48vw), 2.59rem);
+    --step--1: clamp(0.89rem, calc(0.41rem + 0.40vw), 1.04rem);
 
     /* Spaces */
     --space-3xs: clamp(0.25rem, calc(0.13rem + 0.16vw), 0.31rem);
@@ -65,6 +80,37 @@ html {
     --space-s-l: clamp(1.00rem, calc(-2.00rem + 3.75vw), 2.50rem);
     --space-m-xl: clamp(1.50rem, calc(-3.00rem + 5.63vw), 3.75rem);
 
+    /* Type Scale */
+    --step-0: clamp(1.00rem, calc(0.23rem + 0.65vw), 1.25rem);
+    --step-1: clamp(1.13rem, calc(-0.04rem + 0.97vw), 1.50rem);
+    --step-2: clamp(1.27rem, calc(-0.39rem + 1.38vw), 1.80rem);
+    --step-3: clamp(1.42rem, calc(-0.86rem + 1.90vw), 2.16rem);
+    --step-4: clamp(1.60rem, calc(-1.46rem + 2.55vw), 2.59rem);
+    --space-3xs: clamp(0.25rem, calc(0.06rem + 0.16vw), 0.31rem);
+    --space-2xs: clamp(0.50rem, calc(0.11rem + 0.32vw), 0.63rem);
+    --space-xs: clamp(0.75rem, calc(0.17rem + 0.48vw), 0.94rem);
+    --space-s: clamp(1.00rem, calc(0.23rem + 0.65vw), 1.25rem);
+    --space-m: clamp(1.50rem, calc(0.34rem + 0.97vw), 1.88rem);
+    --space-l: clamp(2.00rem, calc(0.45rem + 1.29vw), 2.50rem);
+    --space-xl: clamp(3.00rem, calc(0.68rem + 1.94vw), 3.75rem);
+    --space-2xl: clamp(4.00rem, calc(0.90rem + 2.58vw), 5.00rem);
+    --space-3xl: clamp(6.00rem, calc(1.35rem + 3.87vw), 7.50rem);
+
+    /* One-up pairs */
+    --space-3xs-2xs: clamp(0.25rem, calc(-0.91rem + 0.97vw), 0.63rem);
+    --space-2xs-xs: clamp(0.50rem, calc(-0.85rem + 1.13vw), 0.94rem);
+    --space-xs-s: clamp(0.75rem, calc(-0.80rem + 1.29vw), 1.25rem);
+    --space-s-m: clamp(1.00rem, calc(-1.71rem + 2.26vw), 1.88rem);
+    --space-m-l: clamp(1.50rem, calc(-1.60rem + 2.58vw), 2.50rem);
+    --space-l-xl: clamp(2.00rem, calc(-3.42rem + 4.52vw), 3.75rem);
+    --space-xl-2xl: clamp(3.00rem, calc(-3.19rem + 5.16vw), 5.00rem);
+    --space-2xl-3xl: clamp(4.00rem, calc(-6.84rem + 9.03vw), 7.50rem);
+
+    /* Custom pairs */
+    --space-s-l: clamp(1.00rem, calc(-3.65rem + 3.87vw), 2.50rem);
+    --space-m-xl: clamp(1.50rem, calc(-5.47rem + 5.81vw), 3.75rem);
+    --space-xl-2xl: clamp(3.00rem, calc(-3.19rem + 5.16vw), 5.00rem);
+    --space-xs-l: clamp(0.75rem, calc(-4.67rem + 4.52vw), 2.50rem);
 }
 
 ::selection {

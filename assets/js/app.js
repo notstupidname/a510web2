@@ -90,4 +90,55 @@ window.addEventListener('load', function() {
     body.classList.remove('is-loading');
     body.classList.remove('transition');
 });
+
+// Popups open
+const popupOpeners = document.querySelectorAll('.popup-opener');
+for (const popupOpener of popupOpeners) {
+    popupOpener.addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        const popup_id = this.dataset.popup;
+        const popupEl = document.getElementById(popup_id);
+        if (popupEl) {
+            popupEl.classList.remove("fhide");
+            popupEl.classList.add("fade-in");
+        }
+        const overlayEl = document.querySelector('.global_overlay');
+        if (overlayEl) {
+            overlayEl.classList.remove("hide");
+            overlayEl.classList.add("fade-in");
+        }
+    })
+}
+
+// Popups close
+const popupCloseAll = document.querySelectorAll('.popup_close');
+for (const popupClose of popupCloseAll) {
+    popupClose.addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        const popup_id_string = this.dataset.popup;
+        const popup_id_array = popup_id_string.split(' ');
+        for (const popup_id of popup_id_array) {
+            const popupEl = document.getElementById(popup_id);
+            if (popupEl) {
+                popupEl.classList.remove("fade-in");
+                popupEl.classList.add("fade-out");
+                window.setTimeout(function() {
+                    popupEl.classList.add("fhide");
+                    popupEl.classList.remove("fade-out");
+                }, 250, popupEl);
+            }
+        }
+        const overlayEl = document.querySelector('.global_overlay');
+        if (overlayEl) {
+            overlayEl.classList.remove("fade-in");
+            overlayEl.classList.add("fade-out");
+            window.setTimeout(function() {
+                overlayEl.classList.add("hide");
+                overlayEl.classList.remove("fade-out");
+            }, 250, overlayEl);
+        }
+    })
+}
 })();

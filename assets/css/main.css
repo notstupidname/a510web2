@@ -360,11 +360,11 @@ body.transition:after {
 }
 
 .fade-in {
-    animation: 0.5s fadeIn ease-in forwards;
+    animation: 0.3s fadeIn ease-in forwards;
 }
 
 .fade-out {
-    animation: 0.5s fadeOut ease-in forwards;
+    animation: 0.3s fadeOut ease-in forwards;
 }
 
 @keyframes fadeIn {
@@ -521,8 +521,7 @@ main h1:first-of-type {
 }
 
 main>header {
-    font-size: var(--step-4);
-    margin-top: 1em;
+    margin-top: var(--step-4);
 }
 
 main>header:first-child {
@@ -803,6 +802,11 @@ textarea {
     margin-top: 1em;
 }
 
+.project-top img {
+    width: clamp(300px, 100%, 50ch);
+    object-fit: cover;
+}
+
 .project-top>*:first-child {
     flex: 3 50ch;
 }
@@ -931,6 +935,80 @@ ul.breadcrumbs a {
 
 ul.breadcrumbs a:hover {
     text-decoration-color: var(--text-color);
+}
+
+/* Popups */
+.global_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.popup_overlay {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: var(--space-m) var(--space-m) var(--space-xl);
+    background: var(--back-color);
+    box-shadow: inset 0 0 0 1px var(--text-color);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-l);
+    z-index: 1000;
+}
+
+.popup_overlay.fixed {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(300px, 95%, calc(var(--column-width) - 8rem));
+    max-height: 95vh;
+}
+
+.popup_close_button {
+    position: relative;
+    align-self: flex-end;
+    height: 2.4rem;
+    width: 2.4rem;
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+    z-index: 1000;
+    -webkit-tap-highlight-color: transparent;
+    flex-shrink: 0;
+}
+
+.popup_close_button:hover {
+    transform: scale(0.95);
+}
+
+.popup_close_button:active {
+    transform: scale(0.85);
+}
+
+.popup_close_button svg {
+    width: 100%;
+    height: 100%;
+    stroke-width: 5px;
+    position: absolute;
+    transform: scale(0.6);
+    transition: transform .4s .3s ease-in;
+}
+
+.popup_close_button svg:last-child {
+    transition: transform .4s .6s ease-in;
+}
+
+.popup_overlay:not(.fhide) .popup_close svg:first-child {
+    transform: rotate(45deg) scale(1);
+}
+
+.popup_overlay:not(.fhide) .popup_close svg:last-child {
+    transform: rotate(-45deg) scale(1);
 }
 
 @media screen and (max-width: 1270px) {

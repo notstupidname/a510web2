@@ -37,6 +37,10 @@ html {
     img.plan {
         filter: invert(1);
     }
+
+    img {
+        filter: brightness(.9) contrast(1.1) saturate(.9);
+    }
 }
 
 :root {
@@ -769,12 +773,16 @@ textarea {
     flex-direction: column;
 }
 
-.item img {
-    transition: filter .3s ease-in-out;
+.item div.image-wrapper {
+    overflow: hidden;
 }
 
-.item:hover img {
-    filter: grayscale(1);
+.item img {
+    transition: all .3s ease-in-out;
+}
+
+.item:hover>div>img {
+    transform: scale(1.05);
 }
 
 .item .caption {

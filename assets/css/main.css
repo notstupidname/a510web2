@@ -328,11 +328,16 @@ body:after {
     z-index: 10;
     pointer-events: none;
     transition: opacity .3s ease-in-out;
+    backdrop-filter: blur(4px);
 }
 
 /* html.menu-visible {
     overflow: hidden;
 } */
+
+body:has(div.global_overlay:not(.hide)) {
+    overflow: hidden;
+}
 
 body.menu-visible {
     overflow: hidden;
@@ -946,6 +951,7 @@ ul.breadcrumbs a:hover {
     right: 0;
     z-index: 100;
     background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
 }
 
 .popup_overlay {

@@ -769,6 +769,14 @@ textarea {
     flex-direction: column;
 }
 
+.item img {
+    transition: filter .3s ease-in-out;
+}
+
+.item:hover img {
+    filter: grayscale(1);
+}
+
 .item .caption {
     display: flex;
     align-items: flex-end;

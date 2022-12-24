@@ -476,7 +476,7 @@ ul.menu>li>ul>li {
 
 ul.menu a {
     display: inline-block;
-    padding: 0.25em 0;
+    padding: 0.35em 0;
     text-underline-offset: 0.3em;
     text-decoration: underline 3px;
     text-decoration-color: var(--back-color);
@@ -795,23 +795,23 @@ textarea {
     gap: var(--space-m);
 }
 
-.project-top {
+.two-columns {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-l);
-    margin-top: 1em;
+
 }
 
-.project-top img {
+.two-columns img {
     width: clamp(300px, 100%, 50ch);
     object-fit: cover;
 }
 
-.project-top>*:first-child {
+.two-columns>*:first-child {
     flex: 3 50ch;
 }
 
-.project-top>*:last-child {
+.two-columns>*:last-child {
     flex: 1 30ch;
     justify-content: flex-start;
     gap: var(--space-m);
@@ -862,7 +862,7 @@ textarea {
 
 .project-related>div:last-child {
     align-items: center;
-    margin-top: var(--space-2xl);
+    margin-top: var(--space-xl);
 }
 
 /* Contacts */

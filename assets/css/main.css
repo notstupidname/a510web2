@@ -308,7 +308,7 @@ a {
 
 }
 
-a:not(.button):hover {
+a:not(.button):not(.link):hover {
     opacity: 0.85;
 }
 
@@ -486,14 +486,9 @@ ul.menu>li>ul>li {
 ul.menu a {
     display: inline-block;
     padding: 0.35em 0;
-    text-underline-offset: 0.3em;
-    text-decoration: underline 3px;
-    text-decoration-color: var(--back-color);
-    transition: text-decoration-color .3s ease-in;
 }
 
 ul.menu a:hover {
-    text-decoration-color: var(--text-color);
     opacity: 1;
 }
 
@@ -794,14 +789,17 @@ textarea {
 .item h2 {
     font-size: var(--step-1);
     margin: 1.1em 0 0.25em;
+}
+
+.link {
     text-underline-offset: 0.3em;
-    text-decoration: underline 2px;
+    text-decoration: underline 0.1em;
     text-decoration-color: var(--back-color);
     transition: text-decoration-color .3s ease-in;
 }
 
-.item h2:hover {
-    text-decoration-color: var(--text-color);
+.link:hover {
+    text-decoration-color: var(--mid-color);
 }
 
 .item .caption h4 {
@@ -953,17 +951,6 @@ ul.breadcrumbs li:last-child::after {
 
 ul.breadcrumbs li:last-child {
     opacity: 0.75;
-}
-
-ul.breadcrumbs a {
-    text-decoration: underline var(--back-color);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 0.3em;
-    transition: .3s ease-in-out;
-}
-
-ul.breadcrumbs a:hover {
-    text-decoration-color: var(--text-color);
 }
 
 /* Popups */

@@ -141,4 +141,14 @@ for (const popupClose of popupCloseAll) {
         }
     })
 }
+
+// Scroll to top
+const arrowToTop = document.querySelector('a.top');
+if (arrowToTop) {
+    arrowToTop.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    window.scrollTo(0, 0);
+    });
+};
 })();

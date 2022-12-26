@@ -11,13 +11,13 @@
         <span>Архитектурное</br>бюро</span>
     </a>
     <ul class="menu">
-        <li>
+        <li {% if page.url == "/proekty/" %}class="current"{% endif %}>
             <a class="link" href="/proekty/">Проекты</a>
             <ul>
-                <li><a class="link" href="/project">Дома и коттеджи</a></li>
-                <li class="current"><a class="link" href="/project">Таунхаусы - дуплексы</a></li>
-                <li><a class="link" href="/project">Квадрохаусы</a></li>
-                <li><a class="link" href="/project">Многоквартирные дома</a></li>
+                <li {% if page.url contains "doma-kottedji" %}class="current"{% endif %}><a class="link" href="/proekty/doma-kottedji/">Дома и коттеджи</a></li>
+                <li {% if page.url contains "taunhausy-dupleksy" %}class="current"{% endif %}><a class="link" href="/proekty/taunhausy-dupleksy/">Таунхаусы - дуплексы</a></li>
+                <li {% if page.url contains "kvadrohausy" %}class="current"{% endif %}><a class="link" href="/proekty/kvadrohausy/">Блокированные дома</a></li>
+                <li {% if page.url contains "mnogokvartirnye" %}class="current"{% endif %}><a class="link" href="/proekty/mnogokvartirnye/">Многоквартирные дома</a></li>
             </ul>
         </li>
         <li>
@@ -28,7 +28,7 @@
             </ul>
             <li><a class="link" href="/portfolio/">Портфолио</a></li>
         </li>
-        <li><a class="link" href="/contact">Контакты</a></li>
+        <li {% if page.url == "/contact" %}class="current"{% endif %}><a class="link" href="/contact">Контакты</a></li>
     </ul>
     <ul class="icons">
         <li>

@@ -4,6 +4,8 @@ plugins:
 collections:
   proekty:
     output: true
+  portfolio:
+    output: true
 
 social:
   name: Архитектурное бюро А510

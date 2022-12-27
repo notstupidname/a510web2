@@ -795,8 +795,16 @@ textarea {
     transition: all .3s ease-in-out;
 }
 
-.item:hover>div>img {
+/* .item:hover>div>img {
     transform: scale(1.05);
+} */
+
+.item div.image-wrapper h4 {
+    transition: opacity .3s ease-in;
+}
+
+.item:hover div.image-wrapper h4 {
+    opacity: 0;
 }
 
 .item .caption {

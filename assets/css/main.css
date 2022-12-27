@@ -473,26 +473,27 @@ body {
     }
 }
 
-ul.menu {
+.menu {
     /* margin-top: auto;
     margin-bottom: 3rem; */
     font-size: var(--step-2);
 }
 
-ul.menu>li>ul>li {
+.menu>li>ul>li {
     font-size: var(--step-0);
 }
 
-ul.menu a {
+.menu a,
+.menu span {
     display: inline-block;
     padding: 0.35em 0;
 }
 
-ul.menu a:hover {
+.menu a:hover {
     opacity: 1;
 }
 
-ul.menu li.current>a {
+.menu li.current>a {
     text-decoration-color: rgba(140, 140, 140, 0.2);
 }
 
@@ -501,8 +502,7 @@ ul.icons>li>a {
 }
 
 ul>li>ul {
-    margin-bottom: var(--step-0);
-    padding-left: var(--step-0);
+    margin: var(--space-3xs) 0 var(--space-s) 1ch;
 }
 
 main {
@@ -976,7 +976,7 @@ ul.breadcrumbs li:last-child::after {
     content: "";
 }
 
-ul.breadcrumbs li:last-child {
+ul.breadcrumbs li:last-child:not(:first-child) {
     opacity: 0.75;
     padding-inline-start: 1ch;
 }

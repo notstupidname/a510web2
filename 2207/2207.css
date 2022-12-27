@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+svg.svg-drawing {
+    --lw-1: 0.05%;
+    --lw-2: 0.075%;
+    --lw-3: 0.13%;
+    --lw-4: 0.2%;
+    --lw-5: 0.2%;
+    --lw-6: 0.25%;
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    stroke-linecap: square;
+    fill: none;
+    stroke: var(--text-color);
+    --dxf-small-font: 2000%;
+    --dxf-big-font: 2500%;
+}
+
+svg.svg-drawing .svg-area {
+    fill: var(--text-color);
+    transition: opacity .3s ease-in-out;
+    cursor: pointer;
+    opacity: 0;
+}
+
+svg.svg-drawing .svg-area:hover,
+svg.svg-drawing .svg-area.area-active {
+    opacity: 0.3;
+}
+
+ol.menu {
+    list-style: auto;
+    list-style-position: inside;
+}
+
+.project-wrapper {
+    margin-block: var(--space-l-xl);
+    gap: var(--space-2xl-3xl) var(--space-xl);
+}
+
+.project-tables {
+    flex: 1 30ch;
+    /* justify-content: center; */
+}
+
+.project-tables>div {
+    flex: unset;
+}
+
+.items {
+    --grid-max-columns: 4;
+    --grid-item-min-width: min(200px, 100%);
+}
+
+.items img {
+    aspect-ratio: 1;
+    object-fit: cover;
+}

@@ -1,5 +1,19 @@
 @charset "UTF-8";
 
+/* Light */
+:root {
+    --text-color: hsl(4deg 30% 10%);
+    --back-color: hsl(145deg 15% 75%);
+}
+
+/* Dark */
+@media(prefers-color-scheme: dark) {
+    :root {
+        --text-color: hsl(145deg 15% 75%);
+        --back-color: hsl(4deg 30% 10%);
+    }
+}
+
 svg.svg-drawing {
     --lw-1: 0.05%;
     --lw-2: 0.075%;
@@ -34,8 +48,12 @@ ol.menu {
     list-style-position: inside;
 }
 
+ol.menu .area-link.area-active {
+    text-decoration-color: var(--mid-color);
+}
+
 .project-wrapper {
-    margin-block: var(--space-l-xl);
+    margin: var(--space-l-xl) 0 0;
     gap: var(--space-2xl-3xl) var(--space-xl);
 }
 
@@ -50,10 +68,23 @@ ol.menu {
 
 .items {
     --grid-max-columns: 4;
-    --grid-item-min-width: min(200px, 100%);
+    --grid-item-min-width: min(150px, 100%);
+    --grid-gap: var(--space-s);
+    margin-bottom: 0;
 }
+
 
 .items img {
     aspect-ratio: 1;
     object-fit: cover;
+}
+
+.item h2 {
+    font-size: var(--step-0);
+    margin-top: var(--space-2xs);
+    text-transform: none;
+}
+
+main>section:first-of-type {
+    margin-top: var(--space-l-xl);
 }

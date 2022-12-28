@@ -5,9 +5,9 @@
     {%-for crumb in crumbs offset: 1-%}
         {%-assign full_url = full_url | append: crumb | append: "/"-%}
         {%-if forloop.last-%}
-            {%- unless (page.layout == "project") or (page.layout == "port-project") -%}
+            {% unless (page.layout == "project") or (page.layout == "port-project") %}
             <li>{{page.page-short-title}}</li>
-            {%- endunless -%}
+            {% endunless %}
         {%-else-%}
             {%-assign crumb_title = ""-%}
             {%-for p in site.pages-%}
@@ -19,10 +19,10 @@
                 {%-for p in site.proekty-%}
                     {%-if p.url == full_url-%}
                         {%-capture crumb_title-%}{{p.page-short-title}}{%-endcapture-%}
-                    {% endif %}
+                    {%-endif-%}
                 {% endfor %}
-            {% endif %}
+            {%endif%}
                 <li><a class="link" href="{{full_url}}">{{crumb_title}}</a></li>
-        {%-endif-%}
+        {%endif%}
     {%-endfor-%}
 </ul>

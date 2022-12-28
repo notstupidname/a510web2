@@ -29,7 +29,23 @@ for (const areaLink of areaLinks){
 
 for (const svgArea of svgAreas){
     svgArea.addEventListener('mouseover',function(e){
-        console.log("!!!");
+        const areaNumber = this.dataset.area;
+        const areaLink = document.querySelector(`.area-link[data-area="${areaNumber}"]`);
+        // console.log(svgArea);
+        if (areaLink){
+            areaLink.classList.add('area-active');
+        };
+          
+    });
+
+    svgArea.addEventListener('mouseout',function(e){
+        const areaNumber = this.dataset.area;
+        const areaLink = document.querySelector(`.area-link[data-area="${areaNumber}"]`);
+        // console.log(svgArea);
+        if (areaLink){
+            areaLink.classList.remove('area-active');
+        };
+          
     });
 }
 })();

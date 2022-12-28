@@ -974,11 +974,15 @@ ul.breadcrumbs li::after {
 
 ul.breadcrumbs li:last-child::after {
     content: "";
+    display: none;
 }
+
+/* ul.breadcrumbs li:not(:first-child) {
+    padding-inline-start: 1ch;
+} */
 
 ul.breadcrumbs li:last-child:not(:first-child) {
     opacity: 0.75;
-    padding-inline-start: 1ch;
 }
 
 /* Popups */

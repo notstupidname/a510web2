@@ -1,52 +1,18 @@
 ---
-title: #2207 - Fat Fingers - Interior Design
+title: 2207 - Fat Fingers - Interior Design
 description: Description
 layout: custom
 permalink: /2207/ff
 ---
 <main class="flex-stack">
     <header class="stack">
+        <ul class="breadcrumbs">
+            <li>Главная</li>
+        </ul>
         <h1>Толстопальцево<br>Дизайн интерьера</h1>
         <p style="font-size: var(--step-1);"">Архитектура — это диалог между существующей средой и людьми, которые взаимодействуют с ней. Мы умеем слушать обе стороны.</p>
     </header>
 
-    <div class="project-wrapper">
-        <section class="project-plans flex-stack">
-            <h2>План 1-го этажа</h2>
-            {% include_relative plan1.svg %}
-        </section>
+    {% include_relative schema.svg %}
 
-        <section class="project-tables">
-            <div class="flex-stack">
-                <h2>Экспликация</h2>
-                <ol class="menu">
-                    <li><a class="link area-link" data-area="1" href="/2207/ff/1-01-spalnya">Спальня</a></li>
-                    <li><a class="link area-link" data-area="2" href="#">Гостиная</a></li>
-                    <li><a class="link area-link" data-area="3" href="#">Кухня</a></li>
-                    <li><a class="link area-link" data-area="4" href="#">Гостевая спальня</a></li>
-                    <li><a class="link area-link" data-area="5" href="#">Мастер санузел</a></li>
-                    <li><a class="link area-link" data-area="6" href="#">Комната</a></li>
-                </ul>
-            </div>
-        </section>
-        <section class="project-plans flex-stack">
-            <h2>План 2-го этажа</h2>
-            {% include_relative plan1.svg %}
-        </section>
-
-        <section class="project-tables">
-            <div class="flex-stack">
-                <h2>Экспликация</h2>
-                <ol class="menu">
-                    <li><a class="link" href="#">Комната</a></li>
-                    <li><a class="link" href="#">Комната</a></li>
-                    <li><a class="link" href="#">Комната</a></li>
-                    <li><a class="link" href="#">Комната</a></li>
-                    <li><a class="link" href="#">Комната</a></li>
-                    <li><a class="link" href="#">Комната</a></li>
-                </ul>
-            </div>
-        </section>
-    </div>
-    
 </main>

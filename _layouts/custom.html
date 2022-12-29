@@ -5,7 +5,7 @@
         {% include custom_header.html %}
         {% include custom_nav.html %}
         {{content}}
-        {% include footer.html %}
+        {%-unless page.nofooter-%}{% include footer.html %}{%-endunless-%}
         {% include custom_scripts.html %}
     </body>
 </html>

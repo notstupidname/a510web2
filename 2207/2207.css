@@ -1,17 +1,14 @@
 @charset "UTF-8";
 
-/* Light */
 :root {
-    --text-color: hsl(4deg 30% 10%);
-    --back-color: hsl(145deg 15% 75%);
+    --text-color: #fcfbf9;
+    --back-color: #100e11;
+    --mid-color: #0000ff;
+    --font-weight: 300;
 }
 
-/* Dark */
-@media(prefers-color-scheme: dark) {
-    :root {
-        --text-color: hsl(145deg 15% 75%);
-        --back-color: hsl(4deg 30% 10%);
-    }
+img {
+    filter: brightness(.9) contrast(1.1) saturate(.9);
 }
 
 svg.svg-drawing {
@@ -23,7 +20,7 @@ svg.svg-drawing {
     --lw-6: 0.25%;
     width: 100%;
     height: auto;
-    max-height: 80vh;
+    max-height: 60vh;
     stroke-linecap: square;
     fill: none;
     stroke: var(--text-color);
@@ -32,7 +29,7 @@ svg.svg-drawing {
 }
 
 svg.svg-drawing .svg-area {
-    fill: var(--text-color);
+    fill: var(--mid-color);
     transition: opacity .3s ease-in-out;
     cursor: pointer;
     opacity: 0;
@@ -40,7 +37,7 @@ svg.svg-drawing .svg-area {
 
 svg.svg-drawing .svg-area:hover,
 svg.svg-drawing .svg-area.area-active {
-    opacity: 0.3;
+    opacity: 0.75;
 }
 
 ol.menu {
@@ -87,4 +84,43 @@ ol.menu .area-link.area-active {
 
 main>section:first-of-type {
     margin-top: var(--space-l-xl);
+}
+
+.index-body {
+    grid-row: span 2;
+    display: grid;
+    place-items: center;
+    margin-top: 0;
+}
+
+.index-body .svg-drawing {
+    max-height: 90vh;
+}
+
+.index-body .svg-drawing .svg-trigger {
+    fill: transparent;
+    stroke: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.index-body .svg-drawing .svg-door {
+    fill: transparent;
+    transition: all .3s ease-in-out;
+}
+
+.index-body .svg-drawing .svg-trigger:hover~a .svg-door,
+.index-body .svg-drawing a:hover>.svg-door {
+    fill: blue;
+}
+
+.penis {
+    stroke-dashoffset: 1500;
+    stroke-dasharray: 1500;
+    transition: stroke-dashoffset .5s ease-in;
+    opacity: 0.5;
+}
+
+.index-body .svg-drawing .penis-trigger:hover~.penis {
+    stroke-dashoffset: 0;
 }

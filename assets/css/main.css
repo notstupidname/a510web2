@@ -208,6 +208,7 @@ button {
 
 body {
     min-height: 100vh;
+    min-height: 100dvh;
     text-rendering: optimizeLegibility;
     font-size: var(--step-0);
 }
@@ -401,6 +402,7 @@ body.transition:after {
 body {
     display: grid;
     grid-template-columns: var(--gap) max-content 1fr var(--gap);
+    grid-template-rows: max-content;
 }
 
 .stack>*+* {
@@ -426,6 +428,7 @@ body {
     align-items: center;
     justify-content: space-between;
     grid-column: 2/3;
+    grid-row: span 2;
     width: clamp(33ch, 20vw, 85vw);
 }
 
@@ -1074,6 +1077,7 @@ ul.breadcrumbs li:last-child:not(:first-child) {
         align-items: center;
         z-index: 10;
         line-height: 1;
+        height: fit-content;
     }
 
     #navbar a {

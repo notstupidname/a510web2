@@ -20,7 +20,7 @@ svg.svg-drawing {
     --lw-6: 0.25%;
     width: 100%;
     height: auto;
-    max-height: 60vh;
+    max-height: 80vh;
     stroke-linecap: square;
     fill: none;
     stroke: var(--text-color);
@@ -50,7 +50,8 @@ ol.menu .area-link.area-active {
 }
 
 .project-wrapper {
-    margin: var(--space-l-xl) 0 0;
+    /* margin: var(--space-l-xl) 0 0; */
+    margin: 0;
     gap: var(--space-2xl-3xl) var(--space-xl);
 }
 
@@ -117,8 +118,9 @@ main>section:first-of-type {
 .penis {
     stroke-dashoffset: 1500;
     stroke-dasharray: 1500;
-    transition: stroke-dashoffset .5s ease-in;
+    transition: stroke-dashoffset 1s ease-in;
     opacity: 0.5;
+    stroke-width: 5px;
 }
 
 .index-body .svg-drawing .penis-trigger:hover~.penis {

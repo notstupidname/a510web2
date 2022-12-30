@@ -28,16 +28,21 @@ svg.svg-drawing {
     --dxf-big-font: 2500%;
 }
 
+svg.svg-drawing path,
+svg.svg-drawing text {
+    pointer-events: none;
+}
+
 svg.svg-drawing .svg-area {
-    fill: var(--mid-color);
-    transition: opacity .3s ease-in-out;
+    fill: transparent;
+    transition: all .3s ease-in-out;
     cursor: pointer;
-    opacity: 0;
+    pointer-events: all;
 }
 
 svg.svg-drawing .svg-area:hover,
 svg.svg-drawing .svg-area.area-active {
-    opacity: 0.75;
+    fill: var(--mid-color);
 }
 
 ol.menu {
@@ -57,6 +62,7 @@ ol.menu .area-link.area-active {
 
 .project-tables {
     flex: 1 30ch;
+    align-content: center;
     /* justify-content: center; */
 }
 
@@ -102,17 +108,22 @@ main>section:first-of-type {
     fill: transparent;
     stroke: none;
     cursor: pointer;
+    pointer-events: all;
     -webkit-tap-highlight-color: transparent;
 }
 
 .index-body .svg-drawing .svg-door {
     fill: transparent;
+    pointer-events: all;
     transition: all .3s ease-in-out;
 }
 
-.index-body .svg-drawing .svg-trigger:hover~a .svg-door,
 .index-body .svg-drawing a:hover>.svg-door {
-    fill: blue;
+    fill: var(--mid-color);
+}
+
+.index-body .svg-drawing .svg-trigger:hover~a .svg-door {
+    fill: rgba(0, 0, 255, 0.7);
 }
 
 .penis {
@@ -125,4 +136,21 @@ main>section:first-of-type {
 
 .index-body .svg-drawing .penis-trigger:hover~.penis {
     stroke-dashoffset: 0;
+}
+
+a:not(.button):not(.link):not(.svg-link),
+a:not(.button):not(.link):not(.svg-link) svg {
+    transition: all .3s ease-in-out;
+    color: var(--text-color);
+}
+
+a:not(.button):not(.link):not(.svg-link):hover {
+    color: var(--mid-color);
+    stroke: var(--mid-color);
+    opacity: 1;
+}
+
+a:not(.button):not(.link):not(.svg-link):hover svg {
+    stroke: var(--mid-color);
+    color: var(--mid-color);
 }

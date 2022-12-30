@@ -309,7 +309,7 @@ a {
 
 }
 
-a:not(.button):not(.link):hover {
+a:not(.button):not(.link):not(.svg-link):hover {
     opacity: 0.85;
 }
 

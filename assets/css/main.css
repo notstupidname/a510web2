@@ -52,6 +52,7 @@ html {
 
     /* Type Scale */
     /* @link https://utopia.fyi/type/calculator?c=1920,16,1.125,2540,20,1.2,4,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l|m-xl|xl-2xl|xs-l&g=s,l,xl,12 */
+    --step--1: clamp(0.89rem, calc(0.41rem + 0.40vw), 1.04rem);
     --step-0: clamp(1.00rem, calc(0.23rem + 0.65vw), 1.25rem);
     --step-1: clamp(1.13rem, calc(-0.04rem + 0.97vw), 1.50rem);
     --step-2: clamp(1.27rem, calc(-0.39rem + 1.38vw), 1.80rem);
@@ -589,7 +590,7 @@ table td:first-child {
 
 table td:last-child {
     text-align: right;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 /* Buttons */

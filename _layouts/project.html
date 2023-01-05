@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+    {% include head.html %}
+    <body class="is-loading">
+        <script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type": "Product",
+            "name": "Проект {{page.project-name}}. {{page.project-title}}",
+            "image": "http://a510.ru/images{{page.url}}-1.jpg",
+            "description": "{{page.description}}",
+            "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "{{rating_array | sample}}",
+            "reviewCount": "{{count_array | sample}}"
+            },
+            "offers": {
+            "@type": "Offer",
+            "priceCurrency": "RUB",
+            "price": "{{page.price-project | remove: ' ' | remove: 'р'}}",
+            "priceValidUntil": "2020-11-05",
+            "availability": "http://schema.org/InStock",
+            "seller": {
+                "@type": "Organization",
+                "name": "А510"
+            }
+            }
+        }
+        </script>
+        {% include header.html %}
+        {% include nav.html %}
+        <main>
+            <img class="hero fw" width="1920" height="1080" src="/images/pic169_2.jpg" fetchpriority="high"/>
+            <header>
+                {% include breadcrumbs.html %}
+                <h1>{{ page.project-title }} {{ page.project-name }}</h1>
+            </header>
+            <section class="two-columns">
+                <div class="stack">
+                    <p>{{ page.short-description }}</p>
+                    <h3>Проект: {{ page.price-project }}</h3>
+                </div>
+                <div class="flex-stack">
+                    <button type="button" class="popup-opener" data-popup="popup1">Заказать проект</button>
+                    <button type="button" class="alt popup-opener" data-popup="popup2">Задать вопрос</button>
+                </div>
+            </section>
+            <div class="project-wrapper">
+                <section class="project-plans flex-stack">
+                    <h2>План 1-го этажа</h2>
+                    <img class="plan" width="1920" height="1080" loading="lazy" src="/images/plan-1.png" alt="">
+                    <h2>План 2-го этажа</h2>
+                    <img class="plan" width="1920" height="1080" loading="lazy" src="/images/plan-02.png" alt="">
+                </section>
+
+                <section class="project-tables">
+                    <div class="flex-stack">
+                        <h2>Технические характеристики</h2>
+                        <table>
+                            <tbody>
+                                {%- for param in page.params -%}
+                                <tr>
+                                    <td>{{ param.name }}</td>
+                                    <td>{{ param.value }}</td>
+                                </tr>
+                                {%- endfor -%}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="flex-stack">
+                        <h2>Стоимость</h2>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Готовый проект *</td>
+                                    <td>{{ page.price-project }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Инженерные системы</td>
+                                    <td>200 000 Р</td>
+                                </tr>
+                                <tr>
+                                    <td>Дизайн интерьера</td>
+                                    <td>250 000 Р</td>
+                                </tr>
+                                <tr>
+                                    <td>Индивидуальный проект</td>
+                                    <td>от 300 000 Р</td>
+                                </tr>
+                                <tr>
+                                    <td>План развития территории</td>
+                                    <td>от 200 000 Р</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="asterisk">* В состав проекта входят все чертежи, чтобы построить дом как на картинках. А ещё мы можем внести в проект изменения, если нужно.</p>
+                        <button type="button" class="popup-opener" data-popup="popup1">Заказать проект</button>
+                    </div>
+                </section>
+            </div>
+            <section class="project-gallery flex-stack">
+                <h2>Галерея</h2>
+                <img class="fw" width="1920" height="1080" loading="lazy" src="/images/pic169_2.jpg"/>
+                <img class="fw" width="1920" height="1080" loading="lazy" src="/images/pic169_2.jpg"/>
+            </section>
+            {%- if content.size > 4 -%}
+            <section class="stack">
+                <h2>О проекте</h2>
+                {{ content }}
+            </section>
+            {%- endif -%}
+            {% include related_projects.html %}
+            {% include forms_product.html %}
+        </main>
+        {% include cta.html %}
+        {% include footer.html %}
+        {% include scripts.html %}
+    </body>
+</html>

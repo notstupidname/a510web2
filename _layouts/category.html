@@ -11,54 +11,19 @@
                 <p>{{page.page-description}}</p>
             </header>
             <div class="items">
-                <a href="/project" class="item">
+                {%- assign sorted_cat = site.proekty | sort: 'weight' -%}
+                {%- for project in sorted_cat -%}
+                {%- if project.type != "category" and project.url contains page.url -%}
+                <a href={{ project.url }} class="item">
                     <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
-                    <h2>Каркасный эконом дуплекс TM-120</h2>
+                    <h2>{{ project.project-catalog-title }} {{ project.project-name }}</h2>
                     <div class="caption">
-                        <p>Современное говно для пидоров</p>
-                        <h4>120 м<sup>2</sup></h4>
+                        <p>{{ project.tiny-description }}</p>
+                        <h4>{{ project.area }} м<sup>2</sup></h4>
                     </div>
                 </a>
-                <a href="/project" class="item">
-                    <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
-                    <h2 class="link">Экономичный таунхаус TD-70/85</h2>
-                    <div class="caption">
-                        <p>Дуплекс с разными площадями</p>
-                        <h4>75/85 м<sup>2</sup></h4>
-                    </div>
-                </a>
-                <a href="/project" class="item">
-                    <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
-                    <h2>Каркасный эконом дуплекс TM-120</h2>
-                    <div class="caption">
-                        <p>Современное говно для пидоров</p>
-                        <h4>120 м<sup>2</sup></h4>
-                    </div>
-                </a>
-                <a href="/project" class="item">
-                    <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
-                    <h2>Каркасный эконом дуплекс TM-120</h2>
-                    <div class="caption">
-                        <p>Современное говно для пидоров</p>
-                        <h4>120 м<sup>2</sup></h4>
-                    </div>
-                </a>
-                <a href="/project" class="item">
-                    <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
-                    <h2>Каркасный эконом дуплекс TM-120</h2>
-                    <div class="caption">
-                        <p>Современное говно для пидоров</p>
-                        <h4>120 м<sup>2</sup></h4>
-                    </div>
-                </a>
-                <a href="/project" class="item">
-                    <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
-                    <h2>Каркасный эконом дуплекс TM-120</h2>
-                    <div class="caption">
-                        <p>Современное говно для пидоров</p>
-                        <h4>120 м<sup>2</sup></h4>
-                    </div>
-                </a>
+                {%- endif -%}
+                {%- endfor -%}
             </div>
             {{content}}
         </main>

@@ -1,0 +1,55 @@
+{%-assign url_list = page.url | split: '/'-%}
+{%-assign category_name = url_list[-2]-%}
+{%-assign cats = site.proekty | where: "type", "category"-%}
+{%-for item in cats -%}
+    {%-assign url_list = item.url | split: '/'-%}
+    {%-if category_name == url_list[-1]-%}
+        {%-assign cat_tiny_title = item.page-tiny-title-%}
+        {%-assign cat_url = item.url-%}
+        {%-break-%}
+    {%-endif-%}
+{%-endfor-%}
+<section class="project-related">
+    <h2>Похожие проекты</h2>
+    <div class="items">
+    {%- if page.related -%}
+    {%- for rel-project in page.related -%}
+        {%- for project in site.proekty -%}
+            {%- if project.project-name == rel-project -%}
+            <a href={{ project.url }} class="item">
+                <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
+                <h2>{{ project.project-catalog-title }} {{ project.project-name }}</h2>
+                <div class="caption">
+                    <p>{{ project.tiny-description }}</p>
+                    <h4>{{ project.area }} м<sup>2</sup></h4>
+                </div>
+            </a>
+            {%- endif -%}
+        {%- endfor -%}
+    {%- endfor -%}
+    {%- else -%}
+    {%- assign sorted_cat = site.proekty | sort: 'weight' -%}
+    {%- assign i = 0 -%}
+    {%- for project in sorted_cat -%}
+        {%- if project.type != "category" and project.featured -%}
+            {%- assign i = i | plus: 1 -%}
+            {%- if i > 3 -%}
+                {%- break -%}
+            {%- endif -%}
+            <a href={{ project.url }} class="item">
+                <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
+                <h2>{{ project.project-catalog-title }} {{ project.project-name }}</h2>
+                <div class="caption">
+                    <p>{{ project.tiny-description }}</p>
+                    <h4>{{ project.area }} м<sup>2</sup></h4>
+                </div>
+            </a>
+        {%- endif -%}
+    {%- endfor -%}
+    {%- endif -%}
+    </div>
+    <div class="flex-stack">
+        <a href="#" class="button">Все {{ cat_tiny_title }}</a>
+        <a href="#" class="button alt">Все проекты</a>
+    </div>
+</section>

@@ -5,11 +5,32 @@ layout: generic
 permalink: /404.html
 
 page-title: Ошибка 404
+page-short-title: Ошибка 404
 ---
 <main class="flex-stack">
     <header class="stack">
         {% include breadcrumbs.html %}
         <h1>{{page.page-title}}</h1>
-        <p>{{page.page-description}}</p>
+        <p>К сожалению, страница, которую вы искали, не существует. Может быть посмотрите наши готовые проекты домов и таунхаусов?</p>
     </header>
+    <div class="items">
+        {%- assign sorted_cat = site.proekty | sort: 'weight' -%}
+        {%- assign i = 0 -%}
+        {%- for project in sorted_cat -%}
+        {%- if project.type != "category" and project.featured -%}
+        {%- assign i = i | plus: 1 -%}
+        {%- if i > 6 -%}
+            {%- break -%}
+        {%- endif -%}
+        <a href={{ project.url }} class="item">
+            <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
+            <h2>{{ project.project-catalog-title }} {{ project.project-name }}</h2>
+            <div class="caption">
+                <p>{{ project.tiny-description }}</p>
+                <h4>{{ project.area }} м<sup>2</sup></h4>
+            </div>
+        </a>
+        {%- endif -%}
+        {%- endfor -%}
+    </div>
 </main>

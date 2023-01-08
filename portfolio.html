@@ -15,29 +15,12 @@ page-description: "Основная доля нашей работы - прое�
         <p>{{page.page-description}}</p>
     </header>
     <div class="items">
-        <a href="/portfolio/port-project" class="item">
+        {%- assign sorted_cat = site.portfolio | sort: 'weight' -%}
+        {%- for project in sorted_cat -%}
+        <a href={{ project.url }} class="item">
             <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
-            <h2 class="link">Каркасный эконом дуплекс TM-120</h2>
+            <h2 class="link">{{ project.project-title }}</h2>
         </a>
-        <a href="/portfolio/port-project" class="item">
-            <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
-            <h2 class="link">Экономичный таунхаус TD-70/85</h2>
-        </a>
-        <a href="/portfolio/port-project" class="item">
-            <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
-            <h2 class="link">Каркасный эконом дуплекс TM-120</h2>
-        </a>
-        <a href="/project" class="item">
-            <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
-            <h2 class="link">Каркасный эконом дуплекс TM-120</h2>
-        </a>
-        <a href="/project" class="item">
-            <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
-            <h2 class="link">Каркасный эконом дуплекс TM-120</h2>
-        </a>
-        <a href="/project" class="item">
-            <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
-            <h2 class="link">Каркасный эконом дуплекс TM-120</h2>
-        </a>
+        {%- endfor -%}
     </div>
 </main>

@@ -24,6 +24,7 @@ html {
     --back-color: #fcfbf9;
     --mid-color: #666;
     --font-weight: 375;
+    --font-weight-light: 350;
 }
 
 /* Dark */
@@ -32,6 +33,7 @@ html {
         --text-color: #fcfbf9;
         --back-color: #100e11;
         --font-weight: 300;
+        --font-weight-light: 250;
     }
 
     img.plan {

@@ -2,6 +2,8 @@
 <html lang="ru">
     {% include head.html %}
     <body class="is-loading">
+        {%- assign rating_array = "4.7,4.8,4.9,4.5,4.6,4.4" | split:"," -%}
+        {%- assign count_array = "12,18,6,8,11,16" | split:"," -%}
         <script type="application/ld+json">
         {
             "@context": "http://schema.org/",
@@ -18,7 +20,7 @@
             "@type": "Offer",
             "priceCurrency": "RUB",
             "price": "{{page.price-project | remove: ' ' | remove: 'р'}}",
-            "priceValidUntil": "2020-11-05",
+            "priceValidUntil": "2023-11-05",
             "availability": "http://schema.org/InStock",
             "seller": {
                 "@type": "Organization",
@@ -29,8 +31,26 @@
         </script>
         {% include header.html %}
         {% include nav.html %}
+        {%- assign img_array = "" | split:"," -%}
+        {%- assign url_list = page.url | split: "/" -%}
+        {%- assign project-name = url_list | last -%}
+        {%- for file in site.static_files -%}
+            {%- if file.path contains project-name -%}
+                {%- assign img_array = img_array | push: file.path -%}
+            {%- endif -%}
+        {%- endfor -%}
         <main>
-            <img class="hero fw" width="1920" height="1080" src="/images/pic169_2.jpg" fetchpriority="high"/>
+            <img
+                class="hero fw"
+                width="1920"
+                height="1078"
+                src="/images{{ page.url }}-1_1920w.jpg"
+                alt="{{ page.project-title }} {{ page.project-name }}-Фото-1"
+                title="{{ page.project-title }} {{ page.project-name }}-Фото-1"
+                srcset="/images{{ page.url }}-1_1920w.jpg 1920w, /images{{ page.url }}-1_1600w.jpg 1600w, /images{{ page.url }}-1_1200w.jpg 1200w, /images{{ page.url }}-1_800w.jpg 800w, /images{{ page.url }}-1_400w.jpg 400w"
+                sizes="(max-width: 1270px) 95vw, 75vw"
+                fetchpriority="high"
+            />
             <header>
                 {% include breadcrumbs.html %}
                 <h1>{{ page.project-title }} {{ page.project-name }}</h1>
@@ -47,10 +67,23 @@
             </section>
             <div class="project-wrapper">
                 <section class="project-plans flex-stack">
-                    <h2>План 1-го этажа</h2>
-                    <img class="plan" width="1920" height="1080" loading="lazy" src="/images/plan-1.png" alt="">
-                    <h2>План 2-го этажа</h2>
-                    <img class="plan" width="1920" height="1080" loading="lazy" src="/images/plan-02.png" alt="">
+                {%- if page.basement -%}
+                    {%- assign index = 0 -%}
+                {%- else -%}
+                    {%- assign index = 1 -%}
+                {%- endif -%}
+                {%- for img in img_array -%}
+                    {%- if img contains "plan" -%}
+                    {%- if index == 0 -%}
+                    <h2>План подвала</h2>
+                    <img class="plan" width="1920" height="1080" loading="lazy" src={{ img }} alt="Планирока подвала в проекте {{page.project-title}} {{page.project-name}}">
+                    {%- else -%}
+                    <h2>План {{ index }}-го этажа</h2>
+                    <img class="plan" width="1920" height="1080" loading="lazy" src={{ img }} alt="Планирока {{index}}-го этажа в проекте {{page.project-title}} {{page.project-name}}">
+                    {%- endif -%}
+                    {%- assign index = index | plus:1 -%}
+                    {%- endif -%}
+                {%- endfor -%}
                 </section>
 
                 <section class="project-tables">
@@ -100,8 +133,26 @@
             </div>
             <section class="project-gallery flex-stack">
                 <h2>Галерея</h2>
-                <img class="fw" width="1920" height="1080" loading="lazy" src="/images/pic169_2.jpg"/>
-                <img class="fw" width="1920" height="1080" loading="lazy" src="/images/pic169_2.jpg"/>
+                {%- assign index = 1 -%}
+                {%- for img in img_array -%}
+                {%- unless img contains "plan" or img contains "_" -%}
+                {%- assign img_name = img | remove: ".jpg" -%}
+                {%- unless index == 1 -%}
+                <img
+                class="fw"
+                width="1920"
+                height="1078"
+                src="{{ img_name }}_1920w.jpg"
+                alt="{{ page.project-title }} {{ page.project-name }}-Фото-{{index}}"
+                title="{{ page.project-title }} {{ page.project-name }}-Фото-{{index}}"
+                srcset="{{ img_name }}_1920w.jpg 1920w, {{ img_name }}_1600w.jpg 1600w, {{ img_name }}_1200w.jpg 1200w, {{ img_name }}_800w.jpg 800w, {{ img_name }}_400w.jpg 400w"
+                sizes="(max-width: 1270px) 95vw, 75vw"
+                loading="lazy"
+                />
+                {%- endunless -%}
+                {%- assign index = index | plus: 1 -%}
+                {%- endunless -%}
+                {%- endfor -%}
             </section>
             {%- if content.size > 4 -%}
             <section class="stack">

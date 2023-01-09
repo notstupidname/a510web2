@@ -12,16 +12,29 @@
             </header>
             <div class="items">
                 {%- assign sorted_cat = site.proekty | sort: 'weight' -%}
+                {%- assign index = 1 -%}
                 {%- for project in sorted_cat -%}
                 {%- if project.type != "category" and project.url contains page.url -%}
                 <a href={{ project.url }} class="item">
-                    <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
-                    <h2>{{ project.project-catalog-title }} {{ project.project-name }}</h2>
+                    <div class="image-wrapper">
+                        <h4>{{ project.area }} м<sup>2</sup></h4>
+                        <img
+                            width="1920"
+                            height="1078"
+                            src="/images{{ project.url }}-1_1920w.jpg"
+                            alt="{{ project.project-title }} {{ project.project-name }}-Фото-1"
+                            title="{{ project.project-title }} {{ project.project-name }}-Фото-1"
+                            srcset="/images{{ project.url }}-1_1920w.jpg 1920w, /images{{ project.url }}-1_1600w.jpg 1600w, /images{{ project.url }}-1_1200w.jpg 1200w, /images{{ project.url }}-1_800w.jpg 800w, /images{{ project.url }}-1_400w.jpg 400w"
+                            sizes="(max-width: 936px) 100vw, (max-width: 1270px) 50vw, (max-width: 1742px) 40vw, 25vw"
+                            {%- if index > 6 -%}loading="lazy"{%- endif -%}
+                        />
+                    </div>
+                    <h2 class="link">{{ project.project-catalog-title }} {{ project.project-name }}</h2>
                     <div class="caption">
                         <p>{{ project.tiny-description }}</p>
-                        <h4>{{ project.area }} м<sup>2</sup></h4>
                     </div>
                 </a>
+                {%- assign index = index | plus: 1 -%}
                 {%- endif -%}
                 {%- endfor -%}
             </div>

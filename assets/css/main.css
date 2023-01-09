@@ -764,6 +764,21 @@ textarea {
 
 .item div.image-wrapper {
     overflow: hidden;
+    position: relative;
+}
+
+.item div.image-wrapper h4 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: var(--step-2);
+    z-index: 2;
+    text-transform: lowercase;
+    background-color: var(--back-color);
+    line-height: 1;
+    padding: var(--space-3xs) var(--space-2xs);
+    font-weight: var(--font-weight-light);
+    transition: background-color .3s ease-in;
 }
 
 .item img {
@@ -774,12 +789,8 @@ textarea {
     transform: scale(1.05);
 } */
 
-.item div.image-wrapper h4 {
-    transition: opacity .3s ease-in;
-}
-
 .item:hover div.image-wrapper h4 {
-    opacity: 0;
+    background-color: transparent;
 }
 
 .item .caption {

@@ -16,6 +16,7 @@ page-description: "Основная доля нашей работы - прое�
     </header>
     <div class="items">
         {%- assign sorted_cat = site.portfolio | sort: 'weight' -%}
+        {%- assign index = 1 -%}
         {%- for project in sorted_cat -%}
         <a href={{ project.url }} class="item">
             <img width="1920" height="1080" src="/images/pic169_2.jpg"/>

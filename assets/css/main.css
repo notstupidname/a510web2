@@ -783,6 +783,8 @@ textarea {
 }
 
 .item img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
     transition: all .3s ease-in-out;
 }
 

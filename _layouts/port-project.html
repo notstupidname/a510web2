@@ -4,8 +4,26 @@
     <body class="is-loading">
         {% include header.html %}
         {% include nav.html %}
+        {%- assign img_array = "" | split:"," -%}
+        {%- assign url_list = page.url | split: "/" -%}
+        {%- assign project-name = url_list | last -%}
+        {%- for file in site.static_files -%}
+            {%- if file.path contains project-name -%}
+                {%- assign img_array = img_array | push: file.path -%}
+            {%- endif -%}
+        {%- endfor -%}
         <main>
-            <img class="hero fw" width="1920" height="1080" src="/images/pic169_2.jpg" fetchpriority="high"/>
+            <img
+                class="hero fw"
+                width="1920"
+                height="1078"
+                src="/images{{ page.url }}-01_1920w.jpg"
+                alt="{{ page.project-title }}-Фото-1"
+                title="{{ page.project-title }}-Фото-1"
+                srcset="/images{{ page.url }}-01_1920w.jpg 1920w, /images{{ page.url }}-01_1600w.jpg 1600w, /images{{ page.url }}-01_1200w.jpg 1200w, /images{{ page.url }}-01_800w.jpg 800w, /images{{ page.url }}-01_400w.jpg 400w"
+                sizes="(max-width: 1270px) 95vw, 75vw"
+                fetchpriority="high"
+            />
             <header>
                 {% include breadcrumbs.html %}
                 <h1>{{ page.project-title }}</h1>
@@ -30,8 +48,26 @@
             
             <section class="project-gallery flex-stack">
                 <h2>Галерея</h2>
-                <img class="fw" width="1920" height="1080" loading="lazy" src="/images/pic169_2.jpg"/>
-                <img class="fw" width="1920" height="1080" loading="lazy" src="/images/pic169_2.jpg"/>
+                {%- assign index = 1 -%}
+                {%- for img in img_array -%}
+                {%- unless img contains "_" -%}
+                {%- assign img_name = img | remove: ".jpg" -%}
+                {%- unless index == 1 -%}
+                <img
+                    class="fw"
+                    width="1920"
+                    height="1078"
+                    src="{{ img_name }}_1920w.jpg"
+                    alt="{{ page.project-title }}-Фото-{{index}}"
+                    title="{{ page.project-title }}-Фото-{{index}}"
+                    srcset="{{ img_name }}_1920w.jpg 1920w, {{ img_name }}_1600w.jpg 1600w, {{ img_name }}_1200w.jpg 1200w, {{ img_name }}_800w.jpg 800w, {{ img_name }}_400w.jpg 400w"
+                    sizes="(max-width: 1270px) 95vw, 75vw"
+                    loading="lazy"
+                />
+                {%- endunless -%}
+                {%- assign index = index | plus: 1 -%}
+                {%- endunless -%}
+                {%- endfor -%}
             </section>
             {%- if content.size > 4 -%}
             <section class="stack">

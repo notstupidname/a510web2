@@ -19,9 +19,18 @@ page-description: "Основная доля нашей работы - прое�
         {%- assign index = 1 -%}
         {%- for project in sorted_cat -%}
         <a href={{ project.url }} class="item">
-            <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
+            <img
+                width="1920"
+                height="1078"
+                src="/images{{ project.url }}-01_1920w.jpg"
+                alt="{{ project.project-title }}-Фото-1"
+                srcset="/images{{ project.url }}-01_1920w.jpg 1920w, /images{{ project.url }}-01_1600w.jpg 1600w, /images{{ project.url }}-01_1200w.jpg 1200w, /images{{ project.url }}-01_800w.jpg 800w, /images{{ project.url }}-01_400w.jpg 400w"
+                sizes="(max-width: 936px) 100vw, (max-width: 1270px) 50vw, (max-width: 1742px) 40vw, 25vw"
+                {%- if index > 6 -%}loading="lazy"{%- endif -%}
+            />
             <h2 class="link">{{ project.project-title }}</h2>
         </a>
+        {%- assign index = index | plus: 1 -%}
         {%- endfor -%}
     </div>
 </main>

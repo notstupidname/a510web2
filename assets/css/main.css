@@ -740,15 +740,16 @@ textarea {
 
 .items {
     --grid-gap: var(--space-m);
-    --grid-max-columns: 3;
+    /* --grid-max-columns: 3;
     --grid-item-min-width: min(45ch, 100%);
 
     --gap-count: calc(var(--grid-max-columns) - 1);
     --total-gap-width: calc(var(--gap-count) * var(--grid-gap));
-    --grid-item-max-width: calc((100% - var(--total-gap-width)) / var(--grid-max-columns));
+    --grid-item-max-width: calc((100% - var(--total-gap-width)) / var(--grid-max-columns)); */
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(max(var(--grid-item-min-width), var(--grid-item-max-width)), 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(max(var(--grid-item-min-width), var(--grid-item-max-width)), 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(min(45ch, 90%), 1fr));
     gap: calc(var(--grid-gap)*2) var(--grid-gap);
 
     width: 100%;
@@ -871,7 +872,7 @@ textarea {
 }
 
 .project-tables {
-    flex: 1 37ch;
+    flex: 1 40ch;
     display: flex;
     gap: var(--space-xl-2xl) var(--space-l);
     flex-wrap: wrap;

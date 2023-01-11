@@ -50,7 +50,6 @@ let transition = function(e) {
     e.stopPropagation();
     hideNav();
     body.classList.add('transition');
-    console.log('click2');
     window.setTimeout(function() {
         window.location.href = href;
     }, 250);

@@ -23,47 +23,34 @@ permalink: /
             <p>Вы готовы начать строить дом уже завтра, но все еще не нашли подходящий проект - тут мы придем вам на помощь. Проекты всех домов на этой странице уже готовы, вам остается только выбрать созвучный вашим вкусам и связаться с нами для уточнения некоторых деталей.</p>
         </header>
         <div class="items">
-            <a href="/project" class="item">
-                <div class="image-wrapper" style="position: relative;">
-                    <h4 style="
-                            position: absolute;
-                            right: -0.1ch;
-                            bottom: -0.25em;
-                            font-size: calc(var(--space-2xl-3xl)*1.25);
-                            font-weight: 700;
-                            color:
-                            var(--back-color);
-                            z-index: 2;
-                            text-transform: lowercase;
-                            letter-spacing: -0.1ch;
-                        ">2x120м2</h4>
-                    <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
-                </div>
-                <h2 class="link">Каркасный эконом дуплекс TM-120</h2>
-                <div class="caption">
-                    <p>Современное говно для пидоров</p>
-                </div>
-            </a>
-            <a href="/project" class="item">
-                <div class="image-wrapper">
-                    <h4>2x120 м<sup>2</sup></h4>
-                    <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
-                </div>
-                <h2 class="link">Каркасный эконом дуплекс TM-120</h2>
-                <div class="caption">
-                    <p>Современное говно для пидоров</p>
-                </div>
-            </a>
-            <a href="/project" class="item">
-                <div class="image-wrapper">
-                    <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
-                </div>
-                <h2 class="link">Каркасный эконом дуплекс TM-120</h2>
-                <div class="caption">
-                    <p>Современное говно для пидоров</p>
-                    <h4>120 м<sup>2</sup></h4>
-                </div>
-            </a>
+        {%- assign sorted_cat = site.proekty | sort: 'weight' -%}
+        {%- assign i = 0 -%}
+        {%- for project in sorted_cat -%}
+            {%- if project.type != "category" and project.featured -%}
+                {%- assign i = i | plus: 1 -%}
+                {%- if i > 3 -%}
+                    {%- break -%}
+                {%- endif -%}
+                <a href={{ project.url }} class="item">
+                    <div class="image-wrapper">
+                        <h4>{{ project.area }} м<sup>2</sup></h4>
+                        <img
+                            width="1920"
+                            height="1078"
+                            src="/images{{ project.url }}-1_1920w.jpg"
+                            alt="{{ project.project-title }} {{ project.project-name }}-Фото-1"
+                            srcset="/images{{ project.url }}-1_1920w.jpg 1920w, /images{{ project.url }}-1_1600w.jpg 1600w, /images{{ project.url }}-1_1200w.jpg 1200w, /images{{ project.url }}-1_800w.jpg 800w, /images{{ project.url }}-1_400w.jpg 400w"
+                            sizes="(max-width: 936px) 100vw, (max-width: 1270px) 50vw, (max-width: 1742px) 40vw, 25vw"
+                            loading="lazy"
+                        />
+                    </div>
+                    <h2 class="link">{{ project.project-catalog-title }} {{ project.project-name }}</h2>
+                    <div class="caption">
+                        <p>{{ project.tiny-description }}</p>
+                    </div>
+                </a>
+            {%- endif -%}
+        {%- endfor -%}
         </div>
         <div class="flex-stack">
             <a href="/proekty/" class="button alt">Все проекты</a>
@@ -81,18 +68,28 @@ permalink: /
         <h2>Портфолио</h2>
         <p>Все объекты для нас одинаково важны, второстепенных не бывает. Вне зависимости от того, что мы проектируем, - небольшую беседку или международный аэропорт - принцип подхода не меняется: в любой детали должна быть логика, любое предлагаемое решение должно быть обосновано.</p>
         <div class="items">
-            <a href="/project" class="item">
-                <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
-                <h2 class="link">Каркасный эконом дуплекс TM-120</h2>
-            </a>
-            <a href="/project" class="item">
-                <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
-                <h2 class="link">Каркасный эконом дуплекс TM-120</h2>
-            </a>
-            <a href="/project" class="item">
-                <img width="1920" height="1080" src="/images/pic169_2.jpg"/>
-                <h2 class="link">Каркасный эконом дуплекс TM-120</h2>
-            </a>
+        {%- assign sorted_cat = site.portfolio | sort: 'weight' -%}
+        {%- assign i = 0 -%}
+        {%- for project in sorted_cat -%}
+            {%- if project.featured -%}
+                {%- assign i = i | plus: 1 -%}
+                {%- if i > 3 -%}
+                    {%- break -%}
+                {%- endif -%}
+                <a href={{ project.url }} class="item">
+                    <img
+                        width="1920"
+                        height="1078"
+                        src="/images{{ project.url }}-01_1920w.jpg"
+                        alt="{{ project.project-title }}-Фото-1"
+                        srcset="/images{{ project.url }}-01_1920w.jpg 1920w, /images{{ project.url }}-01_1600w.jpg 1600w, /images{{ project.url }}-01_1200w.jpg 1200w, /images{{ project.url }}-01_800w.jpg 800w, /images{{ project.url }}-01_400w.jpg 400w"
+                        sizes="(max-width: 936px) 100vw, (max-width: 1270px) 50vw, (max-width: 1742px) 40vw, 25vw"
+                        loading="lazy"
+                    />
+                    <h2 class="link">{{ project.project-title }}</h2>
+                </a>
+            {%- endif -%}
+        {%- endfor -%}
         </div>
         <div class="flex-stack">
             <a href="/portfolio/" class="button alt">Смотреть портфолио</a>

@@ -5,7 +5,7 @@ description: Индивидуальный проект частной резид
 layout: port-project
 permalink: /portfolio/:path
 
-weight: 1
+weight: 2
 featured:
 project-title: Частная резиденция в Подмосковье
 

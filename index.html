@@ -28,7 +28,7 @@ permalink: /
         {%- for project in sorted_cat -%}
             {%- if project.type != "category" and project.featured -%}
                 {%- assign i = i | plus: 1 -%}
-                {%- if i > 3 -%}
+                {%- if i > 6 -%}
                     {%- break -%}
                 {%- endif -%}
                 <a href={{ project.url }} class="item">
@@ -73,7 +73,7 @@ permalink: /
         {%- for project in sorted_cat -%}
             {%- if project.featured -%}
                 {%- assign i = i | plus: 1 -%}
-                {%- if i > 3 -%}
+                {%- if i > 6 -%}
                     {%- break -%}
                 {%- endif -%}
                 <a href={{ project.url }} class="item">

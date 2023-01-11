@@ -14,10 +14,23 @@
         </svg>
     </div>
     <form id="form1" class="ajax-form flex-stack">
-        <input type="text" class="name" name="name" placeholder="Ваше имя*" required="">
-        <input type="tel" class="tel" name="tel" placeholder="Номер телефона*" required="">
+        <input type="text" name="name" placeholder="Ваше имя*" required>
+        <input type="tel" name="phone" placeholder="Номер телефона*" required>
+        <input style="display:none" type="text" name="page" value={{ page.url }}>
         <button type="submit" class="button">Отправить</button>
     </form>
+    <div class="form-loading stack fhide">
+        <h3>Отправка..</h3>
+        <p>Очень стараемся побыстрее отправить ваш заказ.</p>
+    </div>
+    <div class="form-success stack fhide">
+        <h3>Спасибо!</h3>
+        <p>Мы отправили вам на почту письмо с подтверждением заказа и свяжемся с вами в самое ближайшее время!</p>
+    </div>
+    <div class="form-error stack fhide">
+        <h3>Ой!</h3>
+        <p>Что-то пошло не так. Попробуйте отправить заказ чуть позже или просто позвоните нам.</p>
+    </div>
 </div>
 <div id="popup2" class="popup_overlay fixed fhide">
     <div class="popup_close_button popup_close" data-popup="popup2">
@@ -33,10 +46,23 @@
         </svg>
     </div>
     <form id="form2" class="ajax-form flex-stack">
-        <input type="text" class="name" name="name" placeholder="Ваше имя*" required="">
-        <input type="tel" class="tel" name="tel" placeholder="Номер телефона*" required="">
-        <input type="email" class="email" name="email" placeholder="E-mail*" required="">
-        <textarea rows="3" name="message" class="message" placeholder="Ваше сообщение"></textarea>
+        <input type="text" name="name" placeholder="Ваше имя*" required>
+        <input type="tel" name="phone" placeholder="Номер телефона*" required>
+        <input type="email" name="email" placeholder="E-mail*" required>
+        <textarea rows="3" name="message" placeholder="Ваше сообщение"></textarea>
+        <input style="display:none" type="text" name="page" value={{ page.url }}>
         <button type="submit" class="button">Отправить</button>
     </form>
+    <div class="form-loading stack fhide">
+        <h3>Отправка..</h3>
+        <p>Очень стараемся побыстрее отправить ваше сообщение.</p>
+    </div>
+    <div class="form-success stack fhide">
+        <h3>Спасибо!</h3>
+        <p>Мы получили ваше сообщение и свяжемся с вами в самое ближайшее время!</p>
+    </div>
+    <div class="form-error stack fhide">
+        <h3>Ой!</h3>
+        <p>Что-то пошло не так. Попробуйте отправить сообщение чуть позже или просто позвоните нам.</p>
+    </div>
 </div>

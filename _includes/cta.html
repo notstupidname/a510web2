@@ -1,23 +1,24 @@
 <aside id="cta" class="stack">
     <h2>Есть вопросы?</h2>
     <p>Задайте их руководителю бюро</p>
-    <div class="form-wrapper">
+    <div class="form-wrapper stack">
         <form id="form-cta" class="ajax-form flex-stack">
-            <input type="text" class="name" name="name" placeholder="Ваше имя*" required="">
-            <input type="tel" class="tel" name="tel" placeholder="Номер телефона*" required="">
+            <input type="text" name="name" placeholder="Ваше имя*" required>
+            <input type="tel" name="phone" placeholder="Номер телефона*" required>
+            <input style="display:none" type="text" name="page" value={{ page.url }}>
             <button type="submit">Получить консультацию</button>
         </form>
-        <div class="form-loading fhide">
+        <div class="form-loading stack fhide">
             <h3>Отправка..</h3>
-            <p>Очень стараемся побыстрее отправить ваш заказ.</p>
+            <p>Очень стараемся побыстрее отправить ваше сообщение.</p>
         </div>
-        <div class="form-success align-center fhide">
+        <div class="form-success stack fhide">
             <h3>Спасибо!</h3>
-            <p>Мы отправили вам на почту письмо с подтверждением заказа и свяжемся с вами в самое ближайшее время!</p>
+            <p>Мы получили ваше сообщение и свяжемся с вами в самое ближайшее время!</p>
         </div>
-        <div class="form-error align-center fhide">
+        <div class="form-error stack fhide">
             <h3>Ой!</h3>
-            <p>Что-то пошло не так. Попробуйте отправить заказ чуть позже или просто позвоните нам.</p>
+            <p>Что-то пошло не так. Попробуйте отправить сообщение чуть позже или просто позвоните нам.</p>
         </div>
     </div>
 

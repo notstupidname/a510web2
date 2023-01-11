@@ -2,22 +2,18 @@
 "use strict"
 
 const body = document.querySelector('body');
-const html = document.querySelector('html');
 const nav = document.querySelector('#nav');
 const navToggle = document.querySelector('a[href="#nav"]');
 const navClose = document.querySelector('#nav .close');
-const backToTop = document.querySelector('#backtotop');
 
 let hideNav = function() {
     nav.classList.remove('visible');
     body.classList.remove('menu-visible');
-    // html.classList.remove('menu-visible');
 }
 
 let toggleNav = function() {
     nav.classList.toggle('visible');
     body.classList.toggle('menu-visible');
-    // html.classList.toggle('menu-visible');
 }
 
 //Hide nav on body click
@@ -151,4 +147,55 @@ if (arrowToTop) {
     window.scrollTo(0, 0);
     });
 };
+
+// Form submission
+const formsAll = document.querySelectorAll('.ajax-form');
+for (const form of formsAll) {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const url = "https://notstupidapp.ew.r.appspot.com/mailapi/a510"
+
+        const form_loading = this.parentNode.querySelector('.form-loading');
+        const form_success = this.parentNode.querySelector('.form-success');
+        const form_error = this.parentNode.querySelector('.form-error');
+
+        const payload = {
+            name: this.elements["name"].value,
+            phone: this.elements["phone"].value,
+            email: this.elements["email"] ? this.elements["email"].value:"no_email",
+            message: this.elements["message"] ? this.elements["message"].value:"no_message",
+            from_page: this.elements["page"].value
+        }
+        this.classList.add('fhide');
+        form_loading.classList.remove('fhide');
+        form_loading.classList.add('fade-in');
+
+        let request = new XMLHttpRequest();
+        request.open('POST', url);
+
+        request.onload = function() {
+            if (this.status >= 200 && this.status < 400) {
+                console.log('Success');
+                console.log(this.responseText);
+                form_loading.classList.add('fhide');
+                form_success.classList.remove('fhide');
+                form_success.classList.add('fade-in');
+            } else {
+                // We reached our target server, but it returned an error
+                console.log('Server returned error');
+                form_loading.classList.add('fhide');
+                form_error.classList.remove('fhide');
+                form_error.classList.add('fade-in');
+            }
+        };
+        request.onerror = function() {
+            console.log('Connection error');
+            form_loading.classList.add('fhide');
+            form_error.classList.remove('fhide');
+            form_error.classList.add('fade-in');
+        };
+        request.send(JSON.stringify(payload));
+
+    }, false);
+}
 })();

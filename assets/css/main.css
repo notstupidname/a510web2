@@ -567,7 +567,7 @@ img.plan {
 /* Table */
 
 table {
-    width: clamp(300px, 100%, 80ch);
+    width: clamp(300px, 100%, var(--column-width));
 }
 
 table tbody tr {

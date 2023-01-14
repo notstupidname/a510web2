@@ -8,13 +8,6 @@
 }
 
 html {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 16px;
-    scrollbar-width: thin;
-    scrollbar-gutter: stable;
-}
-
-html {
     color-scheme: light dark;
 }
 
@@ -85,7 +78,6 @@ html {
     /* Custom pairs */
     --space-s-l: clamp(1.00rem, calc(-3.65rem + 3.87vw), 2.50rem);
     --space-m-xl: clamp(1.50rem, calc(-5.47rem + 5.81vw), 3.75rem);
-    --space-xl-2xl: clamp(3.00rem, calc(-3.19rem + 5.16vw), 5.00rem);
     --space-xs-l: clamp(0.75rem, calc(-4.67rem + 4.52vw), 2.50rem);
 }
 
@@ -95,6 +87,8 @@ html {
 }
 
 html {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
     font-weight: var(--font-weight);
     scroll-behavior: smooth;
     scrollbar-width: thin;

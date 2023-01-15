@@ -18,6 +18,7 @@ html {
     --mid-color: #666;
     --font-weight: 375;
     --font-weight-light: 350;
+    --font-weight-semibold: 450;
 }
 
 /* Dark */
@@ -27,6 +28,7 @@ html {
         --back-color: #100e11;
         --font-weight: 300;
         --font-weight-light: 250;
+        --font-weight-semibold: 350;
     }
 
     img.plan {
@@ -586,6 +588,7 @@ table td:first-child {
 
 table td:last-child {
     text-align: right;
+    font-weight: var(--font-weight-semibold);
     /* white-space: nowrap; */
 }
 

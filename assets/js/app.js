@@ -81,7 +81,7 @@ window.addEventListener('pageshow', function(event) {
 }, false);
 
 // Loading animation
-window.addEventListener('load', function() {
+window.addEventListener('DOMContentLoaded', function() {
     body.classList.remove('is-loading');
     body.classList.remove('transition');
 });

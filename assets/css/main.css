@@ -211,12 +211,12 @@ body {
     overflow-x: hidden;
 }
 
-/* body.is-loading *,
+body.is-loading *,
 body.is-loading *:before,
 body.is-loading *:after {
     animation: none !important;
     transition: none !important;
-} */
+}
 
 /* Type */
 
@@ -300,7 +300,7 @@ body:after {
     width: 100%;
     z-index: 10;
     pointer-events: none;
-    transition: opacity .2s ease-in-out;
+    transition: opacity .125s ease-in-out;
     backdrop-filter: blur(4px);
 }
 

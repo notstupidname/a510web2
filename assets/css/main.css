@@ -44,7 +44,7 @@ html {
     color: var(--text-color);
     fill: var(--text-color);
     stroke: var(--text-color);
-    --column-width: 75ch;
+    --column-width: 90ch;
     --gap: clamp(0.75rem, 2vw, 2rem);
 
     /* Type Scale */
@@ -300,7 +300,7 @@ body:after {
     width: 100%;
     z-index: 10;
     pointer-events: none;
-    transition: opacity .3s ease-in-out;
+    transition: opacity .2s ease-in-out;
     backdrop-filter: blur(4px);
 }
 
@@ -415,6 +415,55 @@ body {
 
 #nav a.logo>svg {
     height: calc(var(--step-4)*1.5);
+    stroke-width: 30px;
+    fill: none;
+}
+
+#nav a.logo>svg path {
+    transition: all .3s;
+    transform-origin: center;
+}
+
+/* Logo Animation */
+#nav a[data-counter="0"].logo:hover #sh-1 {
+    transform: translateX(50%);
+}
+
+#nav a[data-counter="0"].logo:hover #sh-3 {
+    transform: translateX(0%);
+}
+
+#nav a[data-counter="1"].logo:hover #sh-1 {
+    transform: translateY(50%);
+}
+
+#nav a[data-counter="1"].logo:hover #sh-2 {
+    transform: translateY(0%);
+}
+
+#nav a[data-counter="2"].logo:hover #sh-1 {
+    transform: translate(50%, 50%);
+}
+
+#nav a[data-counter="2"].logo:hover #sh-4 {
+    transform: translate(0%, 0%);
+}
+
+/* Piska 2 */
+#nav a[data-counter="3"].logo:hover #sh-1 {
+    transform: translate(250px, -100px);
+}
+
+#nav a[data-counter="3"].logo:hover #sh-3 {
+    transform: translate(250px, 115px);
+}
+
+#nav a[data-counter="3"].logo:hover #sh-2 {
+    transform: rotate(-90deg) translate(-25px, 45px);
+}
+
+#nav a[data-counter="3"].logo:hover #sh-4 {
+    transform: rotate(90deg) translate(520px, 45px);
 }
 
 #nav a.logo>span {
@@ -538,7 +587,7 @@ a.top:hover svg {
 #cta {
     grid-column: 3/4;
     margin-top: var(--space-2xl-3xl);
-    width: clamp(300px, 100%, 50ch);
+    width: clamp(280px, 100%, 50ch);
     margin-inline: auto;
     text-align: center;
 }

@@ -6,18 +6,18 @@ const nav = document.querySelector('#nav');
 const navToggle = document.querySelector('a[href="#nav"]');
 const navClose = document.querySelector('#nav .close');
 
-let hideNav = function() {
+let hideNav = () => {
     nav.classList.remove('visible');
     body.classList.remove('menu-visible');
 }
 
-let toggleNav = function() {
+let toggleNav = () => {
     nav.classList.toggle('visible');
     body.classList.toggle('menu-visible');
 }
 
 //Hide nav on body click
-body.addEventListener('click', function(e){
+body.addEventListener('click', (e) => {
     if (body.classList.contains('menu-visible')) {
         e.preventDefault();
         e.stopPropagation();
@@ -25,16 +25,16 @@ body.addEventListener('click', function(e){
     }
 }, false);
 
-nav.addEventListener('click', function(e){
+nav.addEventListener('click', (e) => {
     e.stopPropagation();
 }, false);
 
-navToggle.addEventListener('click', function(e){
+navToggle.addEventListener('click', (e) =>{
     e.preventDefault();
     e.stopPropagation();
     toggleNav();
 }, false);
-navClose.addEventListener('click', function(e){
+navClose.addEventListener('click', (e) => {
     e.preventDefault();
     e.stopPropagation();
     hideNav();
@@ -74,17 +74,26 @@ nav.addEventListener('click', function(e) {
 }, false);
 
 // Remove transition if page loaded from bfcache
-window.addEventListener('pageshow', function(event) {
-    if (event.persisted === true) {
+window.addEventListener('pageshow', (e) => {
+    if (e.persisted === true) {
         body.classList.remove('transition');
     }
 }, false);
 
 // Loading animation
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', () => {
     body.classList.remove('is-loading');
     body.classList.remove('transition');
 });
+
+// Logo Animation
+const logo = document.querySelector('#nav a.logo');
+logo.addEventListener('mouseenter', () => {
+    logo.dataset.counter = parseInt(Math.floor(Math.random()*3));
+    if (Math.random() < 0.05){
+        logo.dataset.counter = "3";
+    };
+}, false);
 
 // Popups open
 const popupOpeners = document.querySelectorAll('.popup-opener');
@@ -140,7 +149,7 @@ for (const popupClose of popupCloseAll) {
 // Scroll to top
 const arrowToTop = document.querySelector('a.top');
 if (arrowToTop) {
-    arrowToTop.addEventListener('click', function(e) {
+    arrowToTop.addEventListener('click', (e) => {
     e.preventDefault();
     e.stopPropagation();
     window.scrollTo(0, 0);

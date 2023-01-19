@@ -7,6 +7,8 @@
         {%-if forloop.last-%}
             {% unless (page.layout == "project") or (page.layout == "port-project") %}
             <li>{{page.page-short-title}}</li>
+            {% else %}
+            <li></li>
             {% endunless %}
         {%-else-%}
             {%-assign crumb_title = ""-%}

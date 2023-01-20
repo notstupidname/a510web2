@@ -4,6 +4,7 @@ description: Готовый проект трехэтажного дома ко�
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/mnogokvartirnye/dom-koliving-na-15-kvartir-studij-1_1920w.jpg
 
 weight: 5400
 

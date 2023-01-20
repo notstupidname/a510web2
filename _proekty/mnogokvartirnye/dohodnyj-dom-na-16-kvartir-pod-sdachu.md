@@ -4,6 +4,7 @@ description: Готовый проект трехэтажного дома на 
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/mnogokvartirnye/dohodnyj-dom-na-16-kvartir-pod-sdachu-1_1920w.jpg
 
 weight: 5300
 

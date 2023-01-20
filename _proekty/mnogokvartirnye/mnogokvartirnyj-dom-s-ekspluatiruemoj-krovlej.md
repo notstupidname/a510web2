@@ -4,6 +4,7 @@ description: Готовый проект трехэтажного дома на 
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/mnogokvartirnye/mnogokvartirnyj-dom-s-ekspluatiruemoj-krovlej-1_1920w.jpg
 
 weight: 5200
 

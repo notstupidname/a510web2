@@ -4,6 +4,7 @@ description: Индивидуальный проект современного 
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/sovremennoe-shale-01_1920w.jpg
 
 weight: 54
 featured:

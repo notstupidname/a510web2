@@ -4,6 +4,7 @@ description: Коттеджный поселок в Калининграде о�
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/kottedzhniy-poselok-v-kaliningrade-01_1920w.jpg
 
 weight: 5
 featured: 1

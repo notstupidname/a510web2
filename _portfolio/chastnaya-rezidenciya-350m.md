@@ -4,6 +4,7 @@ description: Индивидуальный проект частной резид
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/chastnaya-rezidenciya-350m-01_1920w.jpg
 
 weight: 10
 featured:

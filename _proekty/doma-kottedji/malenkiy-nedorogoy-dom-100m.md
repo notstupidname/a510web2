@@ -4,6 +4,7 @@ description: Готовый проект недорогого маленьког
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/doma-kottedji/malenkiy-nedorogoy-dom-100m-1_1920w.jpg
 
 featured:
 weight: 1000

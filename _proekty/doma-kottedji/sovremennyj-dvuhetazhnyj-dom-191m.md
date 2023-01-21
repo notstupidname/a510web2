@@ -4,6 +4,7 @@ description: Готовый проект современного двухэта
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/doma-kottedji/sovremennyj-dvuhetazhnyj-dom-191m-1_1920w.jpg
 
 featured:
 weight: 1600

@@ -4,6 +4,7 @@ description: Типовой проект трехэтажного таунхау
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/taunhausy-dupleksy/trehetazhnyj-taunhaus-dupleks-s-garazhom-210m-1_1920w.jpg
 
 weight: 4300
 

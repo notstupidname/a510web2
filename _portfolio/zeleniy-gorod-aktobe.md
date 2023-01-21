@@ -4,6 +4,7 @@ description: И от архитектурного бюро А510. Индивид
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/zeleniy-gorod-aktobe-01_1920w.jpg
 
 weight: 1
 featured: 1

@@ -4,6 +4,7 @@ description: Индивидуальный проект частной резид
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/chastnaya-rezidenciya-v-podmoskovye-01_1920w.jpg
 
 weight: 2
 featured:

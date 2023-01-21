@@ -4,6 +4,7 @@ description: Готовый проект компактного современ
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/doma-kottedji/kompaktnyi-sovremennyi-dom-136m-1_1920w.jpg
 
 featured: 1
 weight: 300

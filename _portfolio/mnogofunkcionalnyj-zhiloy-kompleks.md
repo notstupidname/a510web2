@@ -4,6 +4,7 @@ description: Индивидуальный проект многофункцио�
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/mnogofunkcionalnyj-zhiloy-kompleks-01_1920w.jpg
 weight: 70
 project-title: Многофункциональный жилой комплекс в Истре
 

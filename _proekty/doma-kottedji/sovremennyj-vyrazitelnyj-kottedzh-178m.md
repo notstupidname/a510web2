@@ -4,6 +4,7 @@ description: Проект кирпичного современного дома
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/doma-kottedji/sovremennyj-vyrazitelnyj-kottedzh-178m-1_1920w.jpg
 
 featured:
 weight: 700

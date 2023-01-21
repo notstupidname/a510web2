@@ -4,6 +4,7 @@ description: Готовый проект каркасного таунхауса
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/taunhausy-dupleksy/karkasnyi-ekonom-dupleks-120m-1_1920w.jpg
 
 featured: 1
 weight: 200

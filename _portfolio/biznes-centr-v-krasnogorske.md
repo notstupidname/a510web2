@@ -4,6 +4,7 @@ description: Индивидуальный проект бизнес-центра
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/biznes-centr-v-krasnogorske-01_1920w.jpg
 weight: 64
 featured:
 project-title: Бизнес-центр в Красногорске

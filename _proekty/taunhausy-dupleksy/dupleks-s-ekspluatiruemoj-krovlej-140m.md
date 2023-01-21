@@ -4,6 +4,7 @@ description: Готовый проект премиального таунхау
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/taunhausy-dupleksy/dupleks-s-ekspluatiruemoj-krovlej-140m-1_1920w.jpg
 
 featured:
 weight: 203

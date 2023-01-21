@@ -4,6 +4,7 @@ description: Квартал блокированной застройки в Н�
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/kvartal-blokirovannoy-zastroyki-01_1920w.jpg
 
 weight: 7
 featured:

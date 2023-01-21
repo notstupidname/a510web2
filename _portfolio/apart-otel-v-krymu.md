@@ -4,6 +4,7 @@ description: Индивидуальный проект апарт-отеля в 
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/apart-otel-v-krymu-01_1920w.jpg
 
 weight: 12
 featured:

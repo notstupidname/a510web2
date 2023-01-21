@@ -4,6 +4,7 @@ description: Индивидуальный проект банного компл
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/bannyj-kompleks-na-istrinskom-vodochranilishe-01_1920w.jpg
 weight: 67
 project-title: Банный комплекс на Истринском водохранилище
 

@@ -4,6 +4,7 @@ description: Интерьер дома в скандинавском стиле 
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/interyer-v-skandinavskom-stile-01_1920w.jpg
 
 weight: 22
 featured:

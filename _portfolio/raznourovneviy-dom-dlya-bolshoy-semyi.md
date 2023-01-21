@@ -4,6 +4,7 @@ description: Индивидуальный проект разноуровнев�
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/raznourovneviy-dom-dlya-bolshoy-semyi-01_1920w.jpg
 
 weight: 52
 featured:

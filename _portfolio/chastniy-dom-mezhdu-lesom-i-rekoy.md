@@ -4,6 +4,7 @@ description: Индивидуальный проект частного дома
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/chastniy-dom-mezhdu-lesom-i-rekoy-01_1920w.jpg
 
 weight: 14
 featured:

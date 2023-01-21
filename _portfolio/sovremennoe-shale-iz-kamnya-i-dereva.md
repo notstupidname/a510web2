@@ -4,6 +4,7 @@ description: Современное шале из камня и дерева о�
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/sovremennoe-shale-iz-kamnya-i-dereva-01_1920w.jpg
 
 weight: 32
 featured:

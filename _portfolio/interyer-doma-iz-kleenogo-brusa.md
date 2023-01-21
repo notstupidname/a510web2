@@ -4,6 +4,7 @@ description: Интерьер дома из клееного бруса от а�
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/interyer-doma-iz-kleenogo-brusa-01_1920w.jpg
 
 weight: 24
 featured:

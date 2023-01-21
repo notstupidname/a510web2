@@ -4,6 +4,7 @@ description: Дом из клееного бруса от архитектурн
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/dom-iz-kleenogo-brusa-01_1920w.jpg
 
 weight: 11
 featured:

@@ -4,6 +4,7 @@ description: Индивидуальный проект дома-студии д�
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/dom-studiya-dlya-molodoy-semyi-01_1920w.jpg
 
 weight: 51
 featured:

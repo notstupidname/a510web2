@@ -4,6 +4,7 @@ description: Типовой проект таунхауса (дуплекса) �
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/taunhausy-dupleksy/dupleks-iz-penoblokov-ekonom-klassa-122m-1_1920w.jpg
 
 weight: 3700
 

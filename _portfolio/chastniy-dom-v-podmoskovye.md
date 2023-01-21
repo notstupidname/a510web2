@@ -4,6 +4,7 @@ description: Индивидуальный проект частного дома
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/chastniy-dom-v-podmoskovye-01_1920w.jpg
 
 weight: 25
 featured:

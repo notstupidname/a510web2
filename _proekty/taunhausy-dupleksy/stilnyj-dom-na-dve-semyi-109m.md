@@ -4,6 +4,7 @@ description: Готовый проект стильного дома (дупле
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/taunhausy-dupleksy/stilnyj-dom-na-dve-semyi-109m-1_1920w.jpg
 
 featured: 1
 weight: 500

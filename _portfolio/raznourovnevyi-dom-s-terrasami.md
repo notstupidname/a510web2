@@ -4,6 +4,7 @@ description: Индивидуальный проект разноуровнев�
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/raznourovnevyi-dom-s-terrasami-01_1920w.jpg
 
 weight: 60
 project-title: Разноуровневый дом с террасами

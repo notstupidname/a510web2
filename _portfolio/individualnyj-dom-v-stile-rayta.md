@@ -4,6 +4,7 @@ description: Индивидуальный проект дома в стиле Р
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/individualnyj-dom-v-stile-rayta-01_1920w.jpg
 
 weight: 66
 featured:

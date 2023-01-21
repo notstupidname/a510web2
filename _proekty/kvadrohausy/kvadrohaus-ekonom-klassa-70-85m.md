@@ -4,6 +4,7 @@ description: Готовый проект квадрохауса эконом к�
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/kvadrohausy/kvadrohaus-ekonom-klassa-70-85m-1_1920w.jpg
 
 weight: 5300
 

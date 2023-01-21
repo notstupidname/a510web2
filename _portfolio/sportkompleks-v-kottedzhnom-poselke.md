@@ -4,6 +4,7 @@ description: Спорткомплекс в коттеджном поселке �
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/sportkompleks-v-kottedzhnom-poselke-01_1920w.jpg
 
 weight: 21
 featured:

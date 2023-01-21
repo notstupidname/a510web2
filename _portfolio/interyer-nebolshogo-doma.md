@@ -4,6 +4,7 @@ description: Интерьер небольшого дома от архитек�
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/interyer-nebolshogo-doma-01_1920w.jpg
 
 weight: 23
 featured:

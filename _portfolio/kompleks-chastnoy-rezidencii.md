@@ -4,6 +4,7 @@ description: Индивидуальный проект комплекса зда
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/kompleks-chastnoy-rezidencii-01_1920w.jpg
 
 weight: 55
 featured:

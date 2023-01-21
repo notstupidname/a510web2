@@ -4,6 +4,7 @@ description: "Индивидуальный проект коттеджного �
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/kottedzhnyj-poselok-esquire-park-01_1920w.jpg
 weight: 65
 featured:
 project-title: "Коттеджный поселок &laquo;Эсквайр Парк&raquo;"

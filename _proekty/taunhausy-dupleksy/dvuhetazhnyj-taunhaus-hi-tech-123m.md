@@ -4,6 +4,7 @@ description: Готовый проект двухэтажного совреме
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/taunhausy-dupleksy/dvuhetazhnyj-taunhaus-hi-tech-123m-1_1920w.jpg
 
 featured:
 weight: 1500

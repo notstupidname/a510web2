@@ -4,6 +4,7 @@ description: Готовый проект дома на 4 семьи с отде�
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/kvadrohausy/dom-na-4-semyi-98m-1_1920w.jpg
 
 weight: 5200
 

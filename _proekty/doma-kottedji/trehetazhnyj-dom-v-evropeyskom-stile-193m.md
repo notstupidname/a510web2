@@ -4,6 +4,7 @@ description: Готовый оригинальный проект трехэта
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/doma-kottedji/trehetazhnyj-dom-v-evropeyskom-stile-193m-1_1920w.jpg
 
 weight: 2800
 

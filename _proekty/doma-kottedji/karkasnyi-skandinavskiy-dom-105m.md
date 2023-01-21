@@ -4,6 +4,7 @@ description: Готовый проект каркасного скандинав
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/doma-kottedji/karkasnyi-skandinavskiy-dom-105m-1_1920w.jpg
 
 featured:
 weight: 400

@@ -4,6 +4,7 @@ description: Интерьер загородной резиденции от а�
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/interyer-zagorodnoy-rezidencii-01_1920w.jpg
 
 weight: 9
 featured:

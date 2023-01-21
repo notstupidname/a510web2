@@ -4,6 +4,7 @@ description: Проект просторного каменного дома (к
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/doma-kottedji/prostornyj-dom-s-panoramnymi-oknami-206m-1_1920w.jpg
 
 featured:
 weight: 1400

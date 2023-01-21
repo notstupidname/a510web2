@@ -4,6 +4,7 @@ description: Архитектурная концепция квартала бл
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/kvartal-blokirovannoj-zastroyki-ks-138-01_1920w.jpg
 weight: 63
 featured:
 project-title: Квартал блокированной застройки KS-138

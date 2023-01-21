@@ -4,6 +4,7 @@ description: Готовый проект двухэтажного таунхау
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/taunhausy-dupleksy/dvuhetazhnyj-taunhaus-s-garazhom-139m-1_1920w.jpg
 
 weight: 1100
 

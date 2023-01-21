@@ -4,6 +4,7 @@ description: Готовый проект таунхауса на 4 семьи (�
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/kvadrohausy/blokirovannyj-dom-kvadrohaus-104m-1_1920w.jpg
 
 weight: 4900
 

@@ -4,6 +4,7 @@ description: Готовый проект красивого таунхауса (
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/taunhausy-dupleksy/krasivyj-taunhaus-dupleks-106m-1_1920w.jpg
 
 featured:
 weight: 800

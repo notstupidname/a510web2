@@ -4,6 +4,7 @@ description: Готовый проект квадрохауса на 4 семь�
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/kvadrohausy/kvadrohaus-na-4-semyi-85-105m-1_1920w.jpg
 
 weight: 5400
 

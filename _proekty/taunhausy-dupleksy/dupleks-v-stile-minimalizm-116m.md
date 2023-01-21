@@ -4,6 +4,7 @@ description: Типовой проект дуплекса (дома на две 
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/taunhausy-dupleksy/dupleks-v-stile-minimalizm-116m-1_1920w.jpg
 
 weight: 2500
 

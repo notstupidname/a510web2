@@ -4,6 +4,7 @@ description: Индивидуальный проект дома с плоски�
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/dom-s-ploskimi-krovlyami-01_1920w.jpg
 
 weight: 8
 featured:

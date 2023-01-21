@@ -4,6 +4,7 @@ description: Готовый проект каменного лаконичног
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/doma-kottedji/lakonichnyj-dom-pravilnoy-formy-144m-1_1920w.jpg
 
 featured: 1
 weight: 600

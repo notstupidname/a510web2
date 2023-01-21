@@ -4,6 +4,7 @@ description: Индивидуальный проект дома в англий�
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/individualnyi-dom-v-angliyskom-stile-01_1920w.jpg
 
 weight: 61
 featured:

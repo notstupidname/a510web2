@@ -4,6 +4,7 @@ description: Индивидуальный проект частного дома
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/chastniy-dom-v-leningradskoy-oblasti-01_1920w.jpg
 
 weight: 6
 featured: 1

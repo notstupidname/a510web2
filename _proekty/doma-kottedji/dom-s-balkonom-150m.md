@@ -4,6 +4,7 @@ description: Готовый проект дома (коттеджа) с балк
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/doma-kottedji/dom-s-balkonom-150m-1_1920w.jpg
 
 weight: 2400
 

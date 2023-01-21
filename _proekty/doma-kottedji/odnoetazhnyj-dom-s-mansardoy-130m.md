@@ -4,6 +4,7 @@ description: Готовый проект одноэтажного дома (ко
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/doma-kottedji/odnoetazhnyj-dom-s-mansardoy-130m-1_1920w.jpg
 
 weight: 1900
 

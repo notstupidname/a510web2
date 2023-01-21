@@ -4,6 +4,7 @@ description: Индивидуальный проект кондоминиума 
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/kondominium-v-krymu-01_1920w.jpg
 
 weight: 2
 featured: 1

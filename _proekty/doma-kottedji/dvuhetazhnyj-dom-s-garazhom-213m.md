@@ -4,6 +4,7 @@ description: Готовый проект двухэтажного дома (ко
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/doma-kottedji/dvuhetazhnyj-dom-s-garazhom-213m-1_1920w.jpg
 
 weight: 2100
 

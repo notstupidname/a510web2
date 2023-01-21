@@ -4,6 +4,7 @@ description: Типовой проект просторного таунхаус
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/taunhausy-dupleksy/prostornyj-taunhaus-na-dve-semi-290m-1_1920w.jpg
 
 weight: 3500
 

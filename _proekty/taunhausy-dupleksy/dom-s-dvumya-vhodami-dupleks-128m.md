@@ -4,6 +4,7 @@ description: Готовый проект дуплекса (дома с двум�
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/taunhausy-dupleksy/dom-s-dvumya-vhodami-dupleks-128m-1_1920w.jpg
 
 weight: 2300
 

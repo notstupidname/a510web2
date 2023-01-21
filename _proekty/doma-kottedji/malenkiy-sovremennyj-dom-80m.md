@@ -4,6 +4,7 @@ description: Готовый проект маленького современн
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/doma-kottedji/malenkiy-sovremennyj-dom-80m-1_1920w.jpg
 
 featured:
 weight: 900

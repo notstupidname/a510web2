@@ -4,6 +4,7 @@ description: Загородная вилла от архитектурного �
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/zagorodnaya-villa-01_1920w.jpg
 
 weight: 24
 featured:

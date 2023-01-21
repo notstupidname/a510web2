@@ -4,6 +4,7 @@ description: Типовой проект дуплекса (дома на две 
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/taunhausy-dupleksy/dom-s-panoramnymi-oknami-loft-107m-1_1920w.jpg
 
 weight: 3100
 

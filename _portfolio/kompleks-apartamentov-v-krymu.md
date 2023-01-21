@@ -4,6 +4,7 @@ description: Комплекс апартаментов в Крыму от арх
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/kompleks-apartamentov-v-krymu-01_1920w.jpg
 
 weight: 4
 featured: 1

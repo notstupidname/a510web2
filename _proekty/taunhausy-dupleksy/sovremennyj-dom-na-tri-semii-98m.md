@@ -4,6 +4,7 @@ description: Готовый проект современного дома (та
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/taunhausy-dupleksy/sovremennyj-dom-na-tri-semii-98m-1_1920w.jpg
 
 featured: 1
 weight: 210

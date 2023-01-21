@@ -4,6 +4,7 @@ description: Готовый проект стильного камменного
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/doma-kottedji/stilnyj-kamennyj-dom-109m-1_1920w.jpg
 
 featured:
 weight: 100

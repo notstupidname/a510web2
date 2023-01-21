@@ -4,6 +4,7 @@ description: Готовый проект дуплекса с разными пл
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/taunhausy-dupleksy/dupleks-s-raznimi-ploshadyami-105-125m-1_1920w.jpg
 
 weight: 1800
 

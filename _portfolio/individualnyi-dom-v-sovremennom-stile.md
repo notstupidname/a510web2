@@ -4,6 +4,7 @@ description: Индивидуальный проект современного 
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/individualnyi-dom-v-sovremennom-stile-01_1920w.jpg
 
 weight: 58
 project-title: Дом в современном стиле

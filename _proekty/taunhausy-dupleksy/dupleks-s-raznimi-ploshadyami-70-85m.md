@@ -4,6 +4,7 @@ description: Готовый проект таунхауса с разными п
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/taunhausy-dupleksy/dupleks-s-raznimi-ploshadyami-70-85m-1_1920w.jpg
 
 featured:
 weight: 1300

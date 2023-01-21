@@ -4,6 +4,7 @@ description: Индивидуальный проект блокированно�
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/blokirovanniy-dom-v-podmoskovye-01_1920w.jpg
 
 weight: 31
 featured:

@@ -4,6 +4,7 @@ description: Готовый проект маленького таунхауса
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/taunhausy-dupleksy/malenkij-taunhaus-dupleks-79m-1_1920w.jpg
 
 weight: 2000
 

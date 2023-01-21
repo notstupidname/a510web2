@@ -4,6 +4,7 @@ description: Индивидуальный проект дома в стиле л
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/individualnyj-dom-v-stile-loft-01_1920w.jpg
 
 weight: 62
 featured:

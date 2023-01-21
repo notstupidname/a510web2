@@ -4,6 +4,7 @@ description: Индивидуальный проект гостевого дом
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/gostevoy-dom-na-chetyre-semyi-01_1920w.jpg
 
 weight: 56
 featured:

@@ -4,6 +4,7 @@ description: Квартал таунхаусов в Сочи от архитек
 
 layout: port-project
 permalink: /portfolio/:path
+image: /images/portfolio/kvartal-taunhausov-v-sochi-01_1920w.jpg
 
 weight: 30
 featured:

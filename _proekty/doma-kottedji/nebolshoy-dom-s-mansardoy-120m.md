@@ -4,6 +4,7 @@ description: Готовый проект небольшого дома (котт
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/doma-kottedji/nebolshoy-dom-s-mansardoy-120m-1_1920w.jpg
 
 featured:
 weight: 1200

@@ -4,6 +4,7 @@ description: Готовый проект трехэтажного таунхау
 
 layout: project
 permalink: /proekty/:path
+image: /images/proekty/taunhausy-dupleksy/trehetazhnyj-taunhaus-dupleks-180m-1_1920w.jpg
 
 weight: 3300
 

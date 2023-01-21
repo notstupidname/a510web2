@@ -4,6 +4,7 @@ description: Готовые проекты проекты таунхаусов/�
 
 layout: category
 permalink: /proekty/:path/
+image: /images/proekty/taunhausy-dupleksy/dupleks-iz-gazobetona-v-stile-barnhaus-126m-1_1920w.jpg
 
 type: category
 

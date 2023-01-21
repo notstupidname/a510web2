@@ -4,6 +4,7 @@ description: Проекты квадрохаусов (таунхаусов на 
 
 layout: category
 permalink: /proekty/:path/
+image: /images/proekty/kvadrohausy/blokirovannyj-jiloy-dom-kvadrohaus-70m-1_1920w.jpg
 
 type: category
 

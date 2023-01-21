@@ -4,6 +4,7 @@ description: Каталог проектов малоэтажных многок
 
 layout: category
 permalink: /proekty/:path/
+image: /images/proekty/mnogokvartirnye/dom-koliving-na-15-kvartir-studij-1_1920w.jpg
 
 type: category
 

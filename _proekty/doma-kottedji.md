@@ -4,6 +4,7 @@ description: Каталог проектов кирпичных загородн
 
 layout: category
 permalink: /proekty/:path/
+image: /images/proekty/doma-kottedji/stilnyj-kamennyj-dom-109m-1_1920w.jpg
 
 type: category
 

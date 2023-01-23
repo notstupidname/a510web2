@@ -11,6 +11,10 @@
             "name": "Проект {{page.project-name}}. {{page.project-title}}",
             "image": "http://a510.ru/images{{page.url}}-1.jpg",
             "description": "{{page.description}}",
+            "brand": {
+            "@type": "Brand",
+            "name": "A510"
+            },
             "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "{{rating_array | sample}}",
@@ -153,6 +157,30 @@
                 {%- assign index = index | plus: 1 -%}
                 {%- endunless -%}
                 {%- endfor -%}
+<script type="application/ld+json">
+[
+{%- assign index = 1 -%}
+{%- for img in img_array -%}
+{%- unless img contains "plan" or img contains "_" -%}
+{% assign img_name = img | remove: ".jpg" %}
+{%- unless index == 1 -%},{%- endunless -%}{
+"@context": "https://schema.org/",
+"@type": "ImageObject",
+"contentUrl": "{{ site.url }}{{img_name}}_1920w.jpg",
+"license": "https://creativecommons.org/licenses/by-nc/4.0/",
+"acquireLicensePage": "https://a510.ru/contact",
+"creditText": "А510",
+"creator": {
+"@type": "Organization",
+"name": "А510"
+},
+"copyrightNotice": "А510"
+}
+{%- assign index = 2 -%}
+{%- endunless -%}
+{%- endfor -%}
+]
+</script>
             </section>
             {%- if content.size > 4 -%}
             <section class="stack">

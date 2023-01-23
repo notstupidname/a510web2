@@ -135,6 +135,7 @@
                     </div>
                 </section>
             </div>
+            {%- if img_array.size > 10 -%}
             <section class="project-gallery flex-stack">
                 <h2>Галерея</h2>
                 {%- assign index = 1 -%}
@@ -182,6 +183,7 @@
 ]
 </script>
             </section>
+            {%- endif -%}
             {%- if content.size > 4 -%}
             <section class="stack">
                 <h2>О проекте</h2>

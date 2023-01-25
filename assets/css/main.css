@@ -988,7 +988,8 @@ ul.contacts-list>li {
 /* Breadcrumbs */
 
 ul.breadcrumbs {
-    line-height: 2em;
+    line-height: 1;
+    padding-bottom: .5em;
     font-size: var(--step--1);
     max-width: none;
     letter-spacing: -0.05ch;
@@ -1149,6 +1150,10 @@ ul.breadcrumbs li:last-child:not(:first-child) {
 
     main {
         margin-top: 0;
+    }
+
+    ul.breadcrumbs {
+        padding-top: .5em;
     }
 }
 

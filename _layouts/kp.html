@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+    {% include head.html %}
+    <body class="is-loading">
+        {% include header.html %}
+        {% include nav.html %}
+        <main class="flex-stack">
+            <header class="stack">
+                <ul class="breadcrumbs">
+                    <li><a class="link" href="/">Главная</a></li>
+                    <li>КП-230125-1</li>
+                </ul>
+                <h1>Коммерческое предложение</h1>
+                <p>Коттеджный поселок</p>
+                <p>Деревня Хуйкино</p>
+            </header>
+            {{content}}
+        </main>
+        {% include footer.html %}
+        {% include scripts.html %}
+    </body>
+</html>

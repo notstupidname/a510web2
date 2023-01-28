@@ -826,12 +826,14 @@ textarea {
     padding: var(--space-3xs) var(--space-2xs);
     font-weight: var(--font-weight-light);
     transition: background-color .3s ease-in;
+    border-top-left-radius: 3px;
 }
 
 .item img {
     aspect-ratio: 16/9;
     object-fit: cover;
     transition: all .3s ease-in-out;
+    border-radius: 2px;
 }
 
 /* .item:hover>div>img {

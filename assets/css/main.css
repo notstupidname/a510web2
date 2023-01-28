@@ -1153,7 +1153,7 @@ ul.breadcrumbs li:last-child:not(:first-child) {
     }
 
     ul.breadcrumbs {
-        padding-top: .5em;
+        padding-top: var(--space-2xs);
     }
 }
 

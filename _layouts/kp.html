@@ -2,17 +2,27 @@
 <html lang="ru">
     {% include head.html %}
     <body class="is-loading">
+        <style>
+            strong {
+                text-transform: uppercase;
+                font-weight: var(--font-weight-semibold);
+            }
+
+            ul {
+                list-style: inside;
+            }
+        </style>
         {% include header.html %}
         {% include nav.html %}
-        <main class="flex-stack">
-            <header class="stack">
+        <main class="stack">
+            <header>
                 <ul class="breadcrumbs">
                     <li><a class="link" href="/">Главная</a></li>
-                    <li>КП-230125-1</li>
+                    <li>27/01/2023</li>
                 </ul>
                 <h1>Коммерческое предложение</h1>
-                <p>Коттеджный поселок</p>
-                <p>Деревня Хуйкино</p>
+                <p>Проект реконструкции бани</p>
+                <p>Рублевка</p>
             </header>
             {{content}}
         </main>

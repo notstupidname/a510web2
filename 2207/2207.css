@@ -85,21 +85,30 @@ ol.menu .area-link.area-active {
 
 .project-tables {
     flex: 1 30ch;
+}
+
+.project-tables.center {
     align-content: center;
-    /* justify-content: center; */
 }
 
 .project-tables>div {
     flex: unset;
 }
 
+.project-tables>div p {
+    margin-top: 0.25em;
+}
+
 .items {
-    --grid-max-columns: 4;
-    --grid-item-min-width: min(150px, 100%);
     --grid-gap: var(--space-s);
+    --grid-min-size: 35ch;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--grid-min-size), 90%), 1fr));
     margin-bottom: 0;
 }
 
+.items.small {
+    --grid-min-size: 30ch;
+}
 
 .items img {
     aspect-ratio: 1;

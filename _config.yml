@@ -6,6 +6,8 @@ collections:
     output: true
   portfolio:
     output: true
+  2207_tp:
+    output: true
 
 social:
   name: Архитектурное бюро А510

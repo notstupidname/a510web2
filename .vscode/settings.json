@@ -1,4 +1,4 @@
 {
     "liquid.format.enable": false,
-    "svg.preview.background": "editor"
+    "svg.preview.background": "transparent"
 }

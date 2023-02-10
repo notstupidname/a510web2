@@ -15,7 +15,7 @@
                 </section>
                 <section class="project-tables">
                     <div class="stack">
-                        {%- for data in page.data[0].content -%}
+                        {%- for data in page.head -%}
                             <h3>{{data.name}}</h3>
                             {%- for value in data.value -%}
                             <p>{{value}}</p>
@@ -31,7 +31,7 @@
                     {% include_relative {{page.url | split: "/" | last}}_r2.svg %}
                 </div>
             </section>
-            {%- for data_block in page.data offset: 1 -%}
+            {%- for data_block in page.data -%}
             <section class="stack">
                 <h2>{{ data_block.id }}</h2>
                 {%- assign size = data_block.content | size -%}

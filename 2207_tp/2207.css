@@ -106,8 +106,12 @@ ol.menu .area-link.area-active {
     margin-bottom: 0;
 }
 
-.items.small {
-    --grid-min-size: 30ch;
+.items.product {
+    grid-template-columns: repeat(auto-fill, minmax(var(--grid-min-size), 1fr));
+}
+
+.items.product.small {
+    --grid-min-size: 25ch;
 }
 
 .items img {

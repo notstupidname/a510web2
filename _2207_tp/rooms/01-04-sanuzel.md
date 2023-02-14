@@ -44,35 +44,35 @@ data:
   content:
   - name: Тумба BelBagno KRAFT-39 Rovere Tabacco 50 см
     url: https://belbagnoshop.ru/catalog/3566
-    pic: /icon-512.png
+    pic: /2207_tp/images/01-04-sanuzel-6.jpg
     num: 1
   - name: Смеситель Paffoni Ringo RIN071BO
     url: https://www.santehnica.ru/product/213880.html
-    pic: /icon-512.png
+    pic: empty
     num: 1
   - name: Зеркало BelBagno 90 x 90 см с подсветкой
     url: https://www.santehnica.ru/product/390575.html
-    pic: /icon-512.png
+    pic: empty
     num: 1
   - name: Душевая система Paffoni KIT LIG
     url: https://www.santehnica.ru/product/434127.htmI
-    pic: /icon-512.png
+    pic: empty
     num: 1
   - name: Инсталляция Jacob Delafon
     url: https://www.santehnica.ru/product/216641.htmI
-    pic: /icon-512.png
+    pic: empty
     num: 1
   - name: Гигиенический душ Paffoni Tweet Round
     url: https://www.santehnica.ru/product/243253.htmI
-    pic: /icon-512.png
+    pic: empty
     num: 1
   - name: Душевой трап RGW SDR-01-Q
     url: https://rgw-magazin.ru/trapy-dlya-dusha/rgw-sdr-01-q/?variation_id=1559
-    pic: /icon-512.png
+    pic: empty
     num: 1
   - name: Сунержа Богема 3.0 прямая 600х500
     url: https://shop.sunerzha.com/catalog/elektricheskie/lesenki_2/reb_bogema_3_0_pryamaya_600kh500_mem_pravyy/?oid=30780
-    pic: /icon-512.png
+    pic: empty
     num: 1
 - id: Розетки и выключатели
   content:

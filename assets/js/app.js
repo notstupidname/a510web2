@@ -161,7 +161,7 @@ const formsAll = document.querySelectorAll('.ajax-form');
 for (const form of formsAll) {
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        const url = "https://notstupidapp.ew.r.appspot.com/mailapi/a510"
+        const url = "https://worker-email.notstupid.workers.dev/"
 
         const form_loading = this.parentNode.querySelector('.form-loading');
         const form_success = this.parentNode.querySelector('.form-success');
@@ -172,7 +172,7 @@ for (const form of formsAll) {
             phone: this.elements["phone"].value,
             email: this.elements["email"] ? this.elements["email"].value:"no_email",
             message: this.elements["message"] ? this.elements["message"].value:"no_message",
-            from_page: this.elements["page"].value
+            page: this.elements["page"].value
         }
         this.classList.add('fhide');
         form_loading.classList.remove('fhide');
@@ -180,6 +180,7 @@ for (const form of formsAll) {
 
         let request = new XMLHttpRequest();
         request.open('POST', url);
+        // request.setRequestHeader('Content-type', 'application/json');
 
         request.onload = function() {
             if (this.status >= 200 && this.status < 400) {
